@@ -1,0 +1,3920 @@
+fileFormatVersion: 2
+guid: e54372ea9887569419ffcda38342fcfe
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1872
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f6fa8798ee07d40b6359d9acde2173
+      internalID: -51530156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1872
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788b67bdcd4165b45b8e4d0f844d549d
+      internalID: -2030444706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1872
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04bd7295b7e310544acfbb95017fea71
+      internalID: -1634253425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1872
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f348b6d84fd0ed43b44fba666221671
+      internalID: 1160013939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1872
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94949f813fe93c74d8bc0816c527222b
+      internalID: 555612539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1872
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7300ccf299e390244bc1f9d5331df2a7
+      internalID: -1135155275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1872
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4b963865b8b8c4da1698669a50a639
+      internalID: -2084202198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1872
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49daf299409e6274eaf3777edf2c017c
+      internalID: 2075578283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1872
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f363352b58ebd043a66bb12375e1275
+      internalID: 1037180807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1872
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a93be906005a1f41b28a52ec44a1e1d
+      internalID: 1655704661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1744
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af4898bf78d5fe4cab1302eb53e136c
+      internalID: -1846016750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1744
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0893cd881d02de444b0538a86fb1424e
+      internalID: 1262710883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1744
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfddfbd09ffd8fc43860eeef7a8d8f02
+      internalID: -1220326304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1744
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db475f6e4c9822640a4db9721ebc78f2
+      internalID: -555447516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_14
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1744
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a7f328112574f4a965997ca76e7ab7
+      internalID: -1909547480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_15
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1744
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aebb165f61d7a3449fe835628b0c093
+      internalID: -1446659859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_16
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1744
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a78176a890df9d43a197383914556d8
+      internalID: 142684969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_17
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1744
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24ffb7599a117441ab0b9734e9207cc
+      internalID: 293195042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_18
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1744
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83061d7b1a5e2742806800aa1d3727a
+      internalID: -459393806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_19
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1744
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e2d895ee63ec54d848a20bb39bf50f
+      internalID: 1314471350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1616
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ede02fb65c7894793316301a0a996f
+      internalID: -47794369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1616
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc7808fff73d254d8bc4939ac044c40
+      internalID: -1585764534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1616
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a08aa8b67c21824d82dd6a834efefed
+      internalID: 1953091479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_23
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1616
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7be0192a79baa6478e66296881a83b7
+      internalID: -1255763481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_24
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1616
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7650a3c4c893d4b9aa7250aa556250
+      internalID: -782660758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_25
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1616
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc246ec969c046446b696632e7a6ff9f
+      internalID: -1766024934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_26
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1616
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5269622250a47e242862fddfd327bab7
+      internalID: 1376714915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_27
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1616
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b0ef2a1259e4f4d9f0f2f5a6d565c0
+      internalID: 2077322888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1616
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e5fa9dae6f29b438fe289d9cf86746
+      internalID: 1776765092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_29
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1616
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4f66eced3771446a9c02d507ec45ad
+      internalID: 298435989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1488
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2e6f1cf37be4e48a4d7817f6732b34
+      internalID: -800912220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_31
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1488
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b145f3a1c23f742bbba88dd6bd78cb
+      internalID: -608804718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1488
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15654ecf205e9b6459950be51214b30f
+      internalID: 575884143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_33
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1488
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157798a3dad7b82489509fe911945eae
+      internalID: 1789805785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_34
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1488
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb7a4534a54b6e45b9fe61f9a9f6fe9
+      internalID: 123909523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_35
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1488
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf98fe7e51b4a7b458283b43f4047552
+      internalID: 1911069263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_36
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1488
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4927f096252b33a4191b5f184efd80bc
+      internalID: 1853928551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_37
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1488
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff60443f5d7a994c8b22dc2731ca657
+      internalID: 233703904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_38
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1488
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08a814599c3b494ea8b22159d50a317
+      internalID: -703343275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_39
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1488
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac79c5fc149cc74091f1e4082ab6f2e
+      internalID: -133437500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1360
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e393b1a1f9b7464a8fea48f04ff2acf
+      internalID: 1300644323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_41
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1360
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29947072e80ca2347bc8675bff0ff93f
+      internalID: 63538872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_42
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1360
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f7d5e4c95920224ba9d5f4601b7567b
+      internalID: -911015907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_43
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1360
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a572a9c9731a0247b5a025c6abca907
+      internalID: -564712849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1360
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d1f04504cb61a48b07d83b09b9719a
+      internalID: -890463063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_45
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1360
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca75b9cd0a7dfe42ab3c25345543d15
+      internalID: -1145592858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_46
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1360
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3bed64049a60d43ac79ecbd7335b45
+      internalID: 864009462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_47
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1360
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342226f9545465344acb81ff343cf1f5
+      internalID: -1794879675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_48
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1360
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bf98dc761ada84f98060a08c73d5a8
+      internalID: -861383342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_49
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1360
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ddbeca6071919b41a20bf7e9801c168
+      internalID: 247730206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1232
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c45dba3785eb446876018b9962f831
+      internalID: 120226956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_51
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1232
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b451cbc4f2140f429a94f5f6c2edc72
+      internalID: -1548574229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_52
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1232
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197b86a353b3c1f49a5eddb643f0ebba
+      internalID: 1751043929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_53
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1232
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 185d5b85118878646a8cf5da0f04b294
+      internalID: -1363756622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_54
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1232
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1af7312a1547b45b11342c5c3388c4
+      internalID: -927354298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_55
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1232
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e15351c596184748805cb0d08aa3138
+      internalID: -928562694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_56
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1232
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d360af4a596c044bab8b1585f46ec2
+      internalID: 71512473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_57
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1232
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fcdc4a6ee2369648b9a14b6feec73a8
+      internalID: -1549880150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_58
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1232
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aba7f5b5bec68d479e83ac29c91d332
+      internalID: 242601633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_59
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1232
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06e5b10d7ab9344b885024bf114bc5a
+      internalID: 1728218475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1104
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e955cc774886a4299e07745886ccb7
+      internalID: -2009498292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_61
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1104
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1694864d0bd41af45a827f2cde059366
+      internalID: -306079871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_62
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1104
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42fd43e250c5e334d90b4055795f5f4b
+      internalID: 1635992855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_63
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1104
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eed957205425aa429945f919553fe62
+      internalID: 255591613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_64
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1104
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8969f01a5a53a2644ab86d5c72c31b96
+      internalID: 251370270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_65
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1104
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f795aedbcf3a4614d969c71ffb5bb1cd
+      internalID: 2117619449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_66
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1104
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77cc46681f4c474fa20ce1ae7bb79a6
+      internalID: 997180676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_67
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1104
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd4f2b5726fd0642b9f756dce91bc72
+      internalID: 299885209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_68
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1104
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63783258e3ffc749ae91350f5f27aa3
+      internalID: -1233401707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_69
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1104
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c6e32238164784da765e094563abb6
+      internalID: -1307611611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_70
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1104
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e630435ef945d49a69dd360e043a0d
+      internalID: 203683743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_71
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1104
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a885e0a9c3940b46af9316acbd9b017
+      internalID: 511444335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_72
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1104
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f22900b64f49494d9271d6594f1e679
+      internalID: 44022131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_73
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1104
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5f6b74ce21da940bffc82fa9ae65b1
+      internalID: -1873985776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_74
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 976
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f3678e10e213d45bd356ce3044ad70
+      internalID: -1786862069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_75
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 976
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2a7db7bf819cb48b2504e874bb368f
+      internalID: 1166175765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_76
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 976
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b0cad0fb8a963458a25edf6505ea02
+      internalID: 1481006567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_77
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 976
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2817a5479536a14a8b0deee6ee2abdd
+      internalID: 658428218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_78
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 976
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3c8a92dd75f0a40959c837466f845d
+      internalID: 2059022033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_79
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 848
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 531fad8958e44984eaa1d30a543babf8
+      internalID: -163836089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_80
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 848
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e666a74c8ed0d24c9e8d908afad8236
+      internalID: 1440193044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_81
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 848
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e106f64ebb074d74bbf0cb3e76b762f4
+      internalID: -482051875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_82
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 848
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9215d26337194dd47b81afb83b93b9ec
+      internalID: -602321290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_83
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 848
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b82e16f71a7b8194a947559b008729d6
+      internalID: 1194340700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_84
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 848
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1896cee67da35014284a59bf56541b19
+      internalID: -371166923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_85
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 848
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3610ef3277cdf2b42ab6d7f41ab5b32b
+      internalID: 277483723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_86
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 848
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b40772720c0a9547896db457ccc97c2
+      internalID: 1362453010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_87
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 848
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1c044ebdee13c4087e46d2b5640046
+      internalID: 1295235273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_88
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 848
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe0558e11c2c744393afed119f21fd0
+      internalID: -992030921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_89
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 848
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8c9962fcfb6624094179d32592da92
+      internalID: 2090107175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_90
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 848
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ac470095496904a8923d0418bcfc52
+      internalID: 1065271950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_91
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 848
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2192bd707be7b04d883d5db9c401b34
+      internalID: -58244012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_92
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 720
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5dad84e518ed654e830a437133dbd65
+      internalID: 498549600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_93
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 720
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a2725ea16e9ed849b5b68f8c575580d
+      internalID: -1558381001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_94
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 720
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb62024f9672f35428502078c56254d4
+      internalID: 1371272859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_95
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 720
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123393dfb7dfe014aa09f0c236763fbf
+      internalID: 1506499847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_96
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 720
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4752bb31da73e564cb784f7fb411cd1f
+      internalID: -1191209410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_97
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 720
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d2547f59bb78a4c89abce73356a812
+      internalID: -428051938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_98
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 720
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e46f64af69caba4682c93620ec5611b
+      internalID: -435353339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_99
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 720
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2f43cf2eff48a4ea4bf1416db1b69d
+      internalID: 2090423819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_100
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 720
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ee587c2508add488062f37775ca5c8
+      internalID: 1258343886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_101
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 720
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42eaeae9f34e68244863a402863b1151
+      internalID: -1496857593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_102
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 720
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9332def093da35649a3c5c4b3d30a4ed
+      internalID: -748903150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_103
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 720
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2462119673e0a6419e67b45f9690f26
+      internalID: -631453275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_104
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 720
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff3162890e19e64383a6c64a2b8b1a6
+      internalID: 858243805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 592
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce9d96b1d737f1944851847c735325b7
+      internalID: 848929090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_106
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 592
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760ff79cd06e3e149a681228884ba03c
+      internalID: -1784951901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_107
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 592
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aeac6e16857ab944b06f0e130c2376e
+      internalID: 253503242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_108
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 592
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3597be7783aba4ab3866833482faa3
+      internalID: -1932855679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_109
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 592
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd4c87112f5a7c4682ba9291cba7de5
+      internalID: 641543075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_110
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 592
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26cfd6693d3cd174cabb40299905979d
+      internalID: -1002717956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_111
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 592
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170c8079e881fbb4281925099011b504
+      internalID: 730270872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_112
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 592
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21798924b0df36a48817f2f803c64c49
+      internalID: 978375313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_113
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 592
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320ab4e9f9b1ff34a854b294e1ef34aa
+      internalID: -1191901996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_114
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 592
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6089ce5a2261fb0408b65d6e199c68d0
+      internalID: 1303568989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_115
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 592
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee625c2fde89ec64cb7cc46ecdf0076f
+      internalID: 952371707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_116
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 592
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68d3973733211649aa1b93ef6b32152
+      internalID: 1377585499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_117
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 592
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6677399d18930445af7c1b8cced2a62
+      internalID: -379307665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_118
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 592
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e184ffbad72bcad4c8a92bd584ec78f9
+      internalID: 690123487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_119
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b982735bad87e3d47bc6e0c150a52085
+      internalID: 622882171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_120
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e3835e8ccf00b4f8a48b9991e8de60
+      internalID: 1017830843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_121
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d27afd3d602b0240b1cb2a32c3372c3
+      internalID: -1018794897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_122
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7375974f155325042ba49e0ca90c2e02
+      internalID: -1401924870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_123
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7fa2af24446b74290c0dd54b82a18d
+      internalID: 37791111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_124
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 676f7db07b5ee994f90e9e702f488732
+      internalID: -1897850544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_125
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a630541271a1a944ba0346acb44bf01e
+      internalID: 994113625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_126
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88b4bc491abb414f8b5f864e815395d
+      internalID: 1653823986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_127
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5a066e28cc64a4d9ebb5ee6dbe0ba8
+      internalID: -350511795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_128
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1a12a993003f04e93df41bc0418ea6
+      internalID: -1794719895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_129
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5265995ba715d1341b1beb2d9e3a4e97
+      internalID: -90907777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_130
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d49d695d35953c948b603d523e6c7718
+      internalID: 30980129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_131
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdff9f22ada2db94fbd0c4c446ae744c
+      internalID: -670550231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_132
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de741ac66741ed34d9f15b8206b1d267
+      internalID: -313279370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_133
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 464
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5753d5a476c5d439b43fc761786b8e
+      internalID: -928378470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_134
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4255069688842de42867fc6a9a227834
+      internalID: 271891967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_135
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7488d0afeddfa1419717111971d1941
+      internalID: -2096253408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_136
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fc8f5aa33860e46936a0514cf9943b
+      internalID: -318947519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_137
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ad691001bfd6c4987991b8f107301c
+      internalID: -2086857202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_138
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8b7be6a992c8647a7f5c4758b40e71
+      internalID: -1761036373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_139
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5132ecae7e12f49bc89cba25a08e5e
+      internalID: -1743909360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_140
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214c633936ca7a04a9ec99e2c4638ebe
+      internalID: -2023983633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_141
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c07a4aa4d2a22549adf3660408c4719
+      internalID: -642874334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_142
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cefc83d75666c31409f90d8ebdba6575
+      internalID: -2073729654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_143
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0121d6ce2a90d3d44b264683086d40ea
+      internalID: 908372710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_144
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1708f5b70f1c9284abc3f25dbfcb3639
+      internalID: 662249292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_145
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd159b3d967beb469286c1eae42941e
+      internalID: -562060882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_146
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7bf577cbfc007243b6e0c7da052bde3
+      internalID: -1765126763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_147
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c025e7f327042444cb821f95ec9b3412
+      internalID: 487760236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_148
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 336
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2505ce5007ce382418e5d74ea223c9ab
+      internalID: -631911587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_149
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfb5e0defb456740bc7b98c074d487e
+      internalID: -166036559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_150
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 208
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60abf9661f442e4d9e8f598cbf1d60c
+      internalID: -933230567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_151
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 208
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c775b42453c7af446ad2f141313ad532
+      internalID: -1115705164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_152
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 208
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f7e8432a7a66084da11ee3921ec09bb
+      internalID: 1939923700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_153
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 208
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed03e9d9a659cd4458f5f8d0d2fa9355
+      internalID: 524974024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_154
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 208
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a17bb4d6b94954eac06204c15444ed
+      internalID: 1435169899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_155
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 208
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337ec83d222847941b50968550b1ae2a
+      internalID: 147186309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_156
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 208
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a596720e971d5845bcbda31219004c7
+      internalID: -775399896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_157
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 208
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420e118805fd1d642ad6ee04bcadb2b2
+      internalID: -1233240619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_158
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 208
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab8fc8348de32e45a76282c9d17687e
+      internalID: 111223528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_159
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 208
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec05ba8e98188de4583115b1665447bc
+      internalID: -1602936296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_160
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 208
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1846bd65c32240f47b13b2fe1433fe9b
+      internalID: 2024817027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_161
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 208
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312497276ed762f4ba2b6ca6b7c2ff9f
+      internalID: 2024368773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_162
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe30085bfa25d384b803b97a25ced801
+      internalID: 583544057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_163
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 80
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581af0364df67b74781751ce9d811b76
+      internalID: 1814209095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_164
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 80
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d324f5d43ab42c45af44000c964b5b8
+      internalID: 1613999586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_165
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 80
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a5d81c9bd3aea4585d92f5b020429a
+      internalID: 1730783168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_166
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 80
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c69cc8f0a7caed43acf3261e5593552
+      internalID: 1006678033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_167
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 80
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a295e78ba63414e97d39c78db7c997
+      internalID: -1923996013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_168
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 80
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071f2f8ed9b933d4ab98509b7dc93b7c
+      internalID: 87285120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_169
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 80
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618f4779e91fef44b8efe3efe058634f
+      internalID: 572982529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_170
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 80
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a82657e8c92d94a825a187546ab075
+      internalID: -1124160648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_171
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 80
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d22b05674c8674697c50af7edc74eb
+      internalID: 581252437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTileMap_172
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 80
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd74fce714281b4e8540ab065158c82
+      internalID: 152359274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TankgameSpriteTileMap_0: -51530156
+      TankgameSpriteTileMap_1: -2030444706
+      TankgameSpriteTileMap_10: -1846016750
+      TankgameSpriteTileMap_100: 1258343886
+      TankgameSpriteTileMap_101: -1496857593
+      TankgameSpriteTileMap_102: -748903150
+      TankgameSpriteTileMap_103: -631453275
+      TankgameSpriteTileMap_104: 858243805
+      TankgameSpriteTileMap_105: 848929090
+      TankgameSpriteTileMap_106: -1784951901
+      TankgameSpriteTileMap_107: 253503242
+      TankgameSpriteTileMap_108: -1932855679
+      TankgameSpriteTileMap_109: 641543075
+      TankgameSpriteTileMap_11: 1262710883
+      TankgameSpriteTileMap_110: -1002717956
+      TankgameSpriteTileMap_111: 730270872
+      TankgameSpriteTileMap_112: 978375313
+      TankgameSpriteTileMap_113: -1191901996
+      TankgameSpriteTileMap_114: 1303568989
+      TankgameSpriteTileMap_115: 952371707
+      TankgameSpriteTileMap_116: 1377585499
+      TankgameSpriteTileMap_117: -379307665
+      TankgameSpriteTileMap_118: 690123487
+      TankgameSpriteTileMap_119: 622882171
+      TankgameSpriteTileMap_12: -1220326304
+      TankgameSpriteTileMap_120: 1017830843
+      TankgameSpriteTileMap_121: -1018794897
+      TankgameSpriteTileMap_122: -1401924870
+      TankgameSpriteTileMap_123: 37791111
+      TankgameSpriteTileMap_124: -1897850544
+      TankgameSpriteTileMap_125: 994113625
+      TankgameSpriteTileMap_126: 1653823986
+      TankgameSpriteTileMap_127: -350511795
+      TankgameSpriteTileMap_128: -1794719895
+      TankgameSpriteTileMap_129: -90907777
+      TankgameSpriteTileMap_13: -555447516
+      TankgameSpriteTileMap_130: 30980129
+      TankgameSpriteTileMap_131: -670550231
+      TankgameSpriteTileMap_132: -313279370
+      TankgameSpriteTileMap_133: -928378470
+      TankgameSpriteTileMap_134: 271891967
+      TankgameSpriteTileMap_135: -2096253408
+      TankgameSpriteTileMap_136: -318947519
+      TankgameSpriteTileMap_137: -2086857202
+      TankgameSpriteTileMap_138: -1761036373
+      TankgameSpriteTileMap_139: -1743909360
+      TankgameSpriteTileMap_14: -1909547480
+      TankgameSpriteTileMap_140: -2023983633
+      TankgameSpriteTileMap_141: -642874334
+      TankgameSpriteTileMap_142: -2073729654
+      TankgameSpriteTileMap_143: 908372710
+      TankgameSpriteTileMap_144: 662249292
+      TankgameSpriteTileMap_145: -562060882
+      TankgameSpriteTileMap_146: -1765126763
+      TankgameSpriteTileMap_147: 487760236
+      TankgameSpriteTileMap_148: -631911587
+      TankgameSpriteTileMap_149: -166036559
+      TankgameSpriteTileMap_15: -1446659859
+      TankgameSpriteTileMap_150: -933230567
+      TankgameSpriteTileMap_151: -1115705164
+      TankgameSpriteTileMap_152: 1939923700
+      TankgameSpriteTileMap_153: 524974024
+      TankgameSpriteTileMap_154: 1435169899
+      TankgameSpriteTileMap_155: 147186309
+      TankgameSpriteTileMap_156: -775399896
+      TankgameSpriteTileMap_157: -1233240619
+      TankgameSpriteTileMap_158: 111223528
+      TankgameSpriteTileMap_159: -1602936296
+      TankgameSpriteTileMap_16: 142684969
+      TankgameSpriteTileMap_160: 2024817027
+      TankgameSpriteTileMap_161: 2024368773
+      TankgameSpriteTileMap_162: 583544057
+      TankgameSpriteTileMap_163: 1814209095
+      TankgameSpriteTileMap_164: 1613999586
+      TankgameSpriteTileMap_165: 1730783168
+      TankgameSpriteTileMap_166: 1006678033
+      TankgameSpriteTileMap_167: -1923996013
+      TankgameSpriteTileMap_168: 87285120
+      TankgameSpriteTileMap_169: 572982529
+      TankgameSpriteTileMap_17: 293195042
+      TankgameSpriteTileMap_170: -1124160648
+      TankgameSpriteTileMap_171: 581252437
+      TankgameSpriteTileMap_172: 152359274
+      TankgameSpriteTileMap_18: -459393806
+      TankgameSpriteTileMap_19: 1314471350
+      TankgameSpriteTileMap_2: -1634253425
+      TankgameSpriteTileMap_20: -47794369
+      TankgameSpriteTileMap_21: -1585764534
+      TankgameSpriteTileMap_22: 1953091479
+      TankgameSpriteTileMap_23: -1255763481
+      TankgameSpriteTileMap_24: -782660758
+      TankgameSpriteTileMap_25: -1766024934
+      TankgameSpriteTileMap_26: 1376714915
+      TankgameSpriteTileMap_27: 2077322888
+      TankgameSpriteTileMap_28: 1776765092
+      TankgameSpriteTileMap_29: 298435989
+      TankgameSpriteTileMap_3: 1160013939
+      TankgameSpriteTileMap_30: -800912220
+      TankgameSpriteTileMap_31: -608804718
+      TankgameSpriteTileMap_32: 575884143
+      TankgameSpriteTileMap_33: 1789805785
+      TankgameSpriteTileMap_34: 123909523
+      TankgameSpriteTileMap_35: 1911069263
+      TankgameSpriteTileMap_36: 1853928551
+      TankgameSpriteTileMap_37: 233703904
+      TankgameSpriteTileMap_38: -703343275
+      TankgameSpriteTileMap_39: -133437500
+      TankgameSpriteTileMap_4: 555612539
+      TankgameSpriteTileMap_40: 1300644323
+      TankgameSpriteTileMap_41: 63538872
+      TankgameSpriteTileMap_42: -911015907
+      TankgameSpriteTileMap_43: -564712849
+      TankgameSpriteTileMap_44: -890463063
+      TankgameSpriteTileMap_45: -1145592858
+      TankgameSpriteTileMap_46: 864009462
+      TankgameSpriteTileMap_47: -1794879675
+      TankgameSpriteTileMap_48: -861383342
+      TankgameSpriteTileMap_49: 247730206
+      TankgameSpriteTileMap_5: -1135155275
+      TankgameSpriteTileMap_50: 120226956
+      TankgameSpriteTileMap_51: -1548574229
+      TankgameSpriteTileMap_52: 1751043929
+      TankgameSpriteTileMap_53: -1363756622
+      TankgameSpriteTileMap_54: -927354298
+      TankgameSpriteTileMap_55: -928562694
+      TankgameSpriteTileMap_56: 71512473
+      TankgameSpriteTileMap_57: -1549880150
+      TankgameSpriteTileMap_58: 242601633
+      TankgameSpriteTileMap_59: 1728218475
+      TankgameSpriteTileMap_6: -2084202198
+      TankgameSpriteTileMap_60: -2009498292
+      TankgameSpriteTileMap_61: -306079871
+      TankgameSpriteTileMap_62: 1635992855
+      TankgameSpriteTileMap_63: 255591613
+      TankgameSpriteTileMap_64: 251370270
+      TankgameSpriteTileMap_65: 2117619449
+      TankgameSpriteTileMap_66: 997180676
+      TankgameSpriteTileMap_67: 299885209
+      TankgameSpriteTileMap_68: -1233401707
+      TankgameSpriteTileMap_69: -1307611611
+      TankgameSpriteTileMap_7: 2075578283
+      TankgameSpriteTileMap_70: 203683743
+      TankgameSpriteTileMap_71: 511444335
+      TankgameSpriteTileMap_72: 44022131
+      TankgameSpriteTileMap_73: -1873985776
+      TankgameSpriteTileMap_74: -1786862069
+      TankgameSpriteTileMap_75: 1166175765
+      TankgameSpriteTileMap_76: 1481006567
+      TankgameSpriteTileMap_77: 658428218
+      TankgameSpriteTileMap_78: 2059022033
+      TankgameSpriteTileMap_79: -163836089
+      TankgameSpriteTileMap_8: 1037180807
+      TankgameSpriteTileMap_80: 1440193044
+      TankgameSpriteTileMap_81: -482051875
+      TankgameSpriteTileMap_82: -602321290
+      TankgameSpriteTileMap_83: 1194340700
+      TankgameSpriteTileMap_84: -371166923
+      TankgameSpriteTileMap_85: 277483723
+      TankgameSpriteTileMap_86: 1362453010
+      TankgameSpriteTileMap_87: 1295235273
+      TankgameSpriteTileMap_88: -992030921
+      TankgameSpriteTileMap_89: 2090107175
+      TankgameSpriteTileMap_9: 1655704661
+      TankgameSpriteTileMap_90: 1065271950
+      TankgameSpriteTileMap_91: -58244012
+      TankgameSpriteTileMap_92: 498549600
+      TankgameSpriteTileMap_93: -1558381001
+      TankgameSpriteTileMap_94: 1371272859
+      TankgameSpriteTileMap_95: 1506499847
+      TankgameSpriteTileMap_96: -1191209410
+      TankgameSpriteTileMap_97: -428051938
+      TankgameSpriteTileMap_98: -435353339
+      TankgameSpriteTileMap_99: 2090423819
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

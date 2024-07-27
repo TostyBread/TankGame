@@ -1,0 +1,554 @@
+fileFormatVersion: 2
+guid: f936a96960d1cc040850cb8b9c329b7b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_0
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1780
+        width: 471
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b315d8b8ca4d6a449d5bd5e8f78f805
+      internalID: -81822737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_1
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1638
+        width: 431
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4187ea6a62d97024196921d34bbb2e06
+      internalID: 249641243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_2
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 1591
+        width: 857
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2cae3aedc135ae4ca09209acdfba003
+      internalID: 1965552750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_3
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1255
+        width: 679
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdf9b0fb3c9f03459c8024e37164ff2
+      internalID: 992237286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_4
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 1138
+        width: 352
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c204ec8cc6d4d2419e30a948931370b
+      internalID: 577032109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_5
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 1120
+        width: 833
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34227247746d63b45a4511b47201f14f
+      internalID: -691689114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_6
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 900
+        width: 278
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4745fcbdb219271458e74b43fe4eaf50
+      internalID: 1666959393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_7
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 656
+        width: 830
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425801bea8ae1e848ba116774b9d2c48
+      internalID: -431789614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_8
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 460
+        width: 433
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826967f56ee5283409ac77531f98ca22
+      internalID: 68719935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_9
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 802
+        width: 486
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e292206c777ff0046b96611b9a6971c1
+      internalID: 235006454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_10
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 554
+        width: 167
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ead400bf6ccee4d979106725c27352
+      internalID: -1471981558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_13
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 473
+        width: 245
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f00b1c93bede734b8265494e11fc8a4
+      internalID: 350696676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_21
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 85
+        width: 278
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdec3fe1eacb664fa3ea2f41c8c8af9
+      internalID: -763928179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_22
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 405
+        width: 160
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e99f3db3144be440b5830e5ff0a8bb0
+      internalID: -621204261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_23
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 318
+        width: 246
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905aaa62c85c4f54fbbe2a6b1026051c
+      internalID: -1521068205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_30
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 98
+        width: 303
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff73aa26470215f468de86a4c0f71b71
+      internalID: 1493061173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_11
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 434
+        width: 290
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db7ccb078ed3ad46b8ba9a91c53516b
+      internalID: -611102158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_12
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 260
+        width: 333
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376ecda1188ba494abfa3da720250405
+      internalID: -1925528298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TankgameSpriteTanks_14
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 87
+        width: 315
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb57b3d556da5ed4387c7b625ee542bb
+      internalID: 1190207035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TankgameSpriteTanks_0: -81822737
+      TankgameSpriteTanks_1: 249641243
+      TankgameSpriteTanks_10: -1471981558
+      TankgameSpriteTanks_11: -611102158
+      TankgameSpriteTanks_12: -1925528298
+      TankgameSpriteTanks_13: 350696676
+      TankgameSpriteTanks_14: 1190207035
+      TankgameSpriteTanks_15: -1785832329
+      TankgameSpriteTanks_16: -463403044
+      TankgameSpriteTanks_17: 1428054024
+      TankgameSpriteTanks_18: -1390032638
+      TankgameSpriteTanks_19: 657264879
+      TankgameSpriteTanks_2: 1965552750
+      TankgameSpriteTanks_20: -439607871
+      TankgameSpriteTanks_21: -763928179
+      TankgameSpriteTanks_22: -621204261
+      TankgameSpriteTanks_23: -1521068205
+      TankgameSpriteTanks_24: -1214006683
+      TankgameSpriteTanks_25: 1833934523
+      TankgameSpriteTanks_26: 53300890
+      TankgameSpriteTanks_27: 510314053
+      TankgameSpriteTanks_28: 396169133
+      TankgameSpriteTanks_29: -741775564
+      TankgameSpriteTanks_3: 992237286
+      TankgameSpriteTanks_30: 1493061173
+      TankgameSpriteTanks_31: 522840067
+      TankgameSpriteTanks_32: -1685069058
+      TankgameSpriteTanks_33: 1385706654
+      TankgameSpriteTanks_34: -1510051029
+      TankgameSpriteTanks_35: 127404975
+      TankgameSpriteTanks_36: 1403012130
+      TankgameSpriteTanks_37: -853788310
+      TankgameSpriteTanks_38: -72721117
+      TankgameSpriteTanks_39: -1500025810
+      TankgameSpriteTanks_4: 577032109
+      TankgameSpriteTanks_40: -1289585202
+      TankgameSpriteTanks_5: -691689114
+      TankgameSpriteTanks_6: 1666959393
+      TankgameSpriteTanks_7: -431789614
+      TankgameSpriteTanks_8: 68719935
+      TankgameSpriteTanks_9: 235006454
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
