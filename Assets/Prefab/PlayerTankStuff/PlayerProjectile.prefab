@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1471981558, guid: f936a96960d1cc040850cb8b9c329b7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: -4616395085708256147}
   - component: {fileID: 1562585956077342968}
   - component: {fileID: 7842222362273881174}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0013792515, y: 0.0006418228}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -189,7 +189,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.09322691, y: 0.4109702}
   m_EdgeRadius: 0
 --- !u!114 &7842222362273881174
 MonoBehaviour:
@@ -204,4 +204,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 10
-  projectileLifetime: 50
+  projectileLifetime: 5
+  HitEnemySFX: {fileID: 0}
+  HitMiscSFX: {fileID: 0}
+  HitDestructableSFX: {fileID: 0}
+  hitMisc: {fileID: 5866756778443117826, guid: b77881352a3f7134d82b66ce25dc53ac, type: 3}
+  hitEnemy: {fileID: 6397874653959768597, guid: 464a6ab86b6ee10449f5585b89ff8054, type: 3}

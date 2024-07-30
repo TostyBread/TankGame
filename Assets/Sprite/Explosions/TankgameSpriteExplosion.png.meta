@@ -264,27 +264,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: TankgameSpriteExplosion_2
-      rect:
-        serializedVersion: 2
-        x: 1660
-        y: 751
-        width: 169
-        height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06d0d259dd1d4764880d9399a7439cef
-      internalID: 1828870074
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
