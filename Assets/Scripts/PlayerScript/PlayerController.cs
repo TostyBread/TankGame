@@ -1,7 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using TMPro; // Import the TextMeshPro namespace
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,9 +9,6 @@ public class PlayerController : MonoBehaviour
     public float turretRotationSpeed = 5f; // Turret rotation speed
 
     public GameObject tankProjectile; // Tank projectile
-    //public float delayShotTime = 2f; // Delay between each shot
-    //private float delayTimer;
-    //private bool canShoot = true; // Condition to determind if tank can shoot
     public float projectileSpeed = 50f; // Tank projectile speed
 
     public Transform firePos; // Projectile spawn location
@@ -20,14 +16,56 @@ public class PlayerController : MonoBehaviour
 
     public GameObject explosionPrefab; // Explosion prefab
 
+    public float cooldownTime = 2f; // Cooldown time between shots
+    private float cooldownTimer = 0f; // Timer to track cooldown
+
+    public TMP_Text reloadingText; // TextMeshPro UI element to display reloading message
+
+    void Start()
+    {
+        if (reloadingText != null)
+        {
+            reloadingText.enabled = false; // Ensure the text is initially hidden
+        }
+    }
+
     void Update()
     {
         PlayerMovement();
         TurretRotation();
 
+        // Update the cooldown timer
+        cooldownTimer -= Time.deltaTime;
+
+        // Check for shooting input and cooldown
         if (Input.GetButtonDown("Fire1"))
         {
-            PlayerShoot();
+            if (cooldownTimer <= 0f)
+            {
+                PlayerShoot();
+                // Reset the cooldown timer
+                cooldownTimer = cooldownTime;
+                if (reloadingText != null)
+                {
+                    reloadingText.enabled = false; // Hide reloading text when shooting
+                }
+            }
+            else
+            {
+                // Show reloading message
+                if (reloadingText != null)
+                {
+                    reloadingText.enabled = true; // Show reloading text
+                }
+            }
+        }
+        else
+        {
+            // Hide reloading text when button is not pressed
+            if (reloadingText != null)
+            {
+                reloadingText.enabled = false;
+            }
         }
     }
 
@@ -41,6 +79,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(0, move, 0);
         transform.Rotate(0, 0, -rotate);
     }
+
     private void TurretRotation()
     {
         // Get the mouse position in world space
@@ -58,14 +97,13 @@ public class PlayerController : MonoBehaviour
         turret.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 
-    private void PlayerShoot() //Player fires their gun
+    private void PlayerShoot() // Player fires their gun
     {
-
         Instantiate(tankProjectile, firePos.position, firePos.rotation);
         PlayExplosion();
     }
 
-    private void PlayExplosion() //Plays explosion
+    private void PlayExplosion() // Plays explosion
     {
         // Get the player's current rotation
         Quaternion turretRotation = turret.rotation;
@@ -92,8 +130,6 @@ public class PlayerController : MonoBehaviour
         // Start the coroutine to destroy the explosion after the animation ends
         StartCoroutine(DestroyAfterAnimation(explosion, explosionDuration));
     }
-
-
 
     private IEnumerator DestroyAfterAnimation(GameObject explosion, float duration)
     {

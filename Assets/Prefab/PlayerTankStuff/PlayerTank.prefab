@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 7209234821387380514}
   - component: {fileID: 202274400256490556}
   - component: {fileID: 5241362640135517007}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerTank
   m_TagString: Player
   m_Icon: {fileID: 0}
