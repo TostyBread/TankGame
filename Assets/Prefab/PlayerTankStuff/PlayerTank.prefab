@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  rotationSpeed: 150
+  rotationSpeed: 70
   turretRotationSpeed: 3
   tankProjectile: {fileID: 5743627026731766755, guid: 5875a8b15ec5ddd4c8aeb18527bc9905, type: 3}
   projectileSpeed: 50

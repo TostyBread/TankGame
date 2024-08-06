@@ -6,11 +6,15 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5f; // Tank speed
-    public float rotationSpeed = 200f; // Hull rotation speed
+    public float rotationSpeed = 50f; // Hull rotation speed
     public float turretRotationSpeed = 5f; // Turret rotation speed
 
     public GameObject tankProjectile; // Tank projectile
+    //public float delayShotTime = 2f; // Delay between each shot
+    //private float delayTimer;
+    //private bool canShoot = true; // Condition to determind if tank can shoot
     public float projectileSpeed = 50f; // Tank projectile speed
+
     public Transform firePos; // Projectile spawn location
     public Transform turret; // Reference to the tank's turret
 
@@ -56,11 +60,12 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerShoot() //Player fires their gun
     {
+
         Instantiate(tankProjectile, firePos.position, firePos.rotation);
         PlayExplosion();
     }
 
-    private void PlayExplosion()
+    private void PlayExplosion() //Plays explosion
     {
         // Get the player's current rotation
         Quaternion turretRotation = turret.rotation;
