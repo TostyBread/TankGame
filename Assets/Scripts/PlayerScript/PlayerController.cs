@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using TMPro; // Import the TextMeshPro namespace
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,17 +16,15 @@ public class PlayerController : MonoBehaviour
 
     public GameObject explosionPrefab; // Explosion prefab
 
+    public TextMeshProUGUI reloadText; // Reference to the UI text component
+    private bool isReloading = false; // Track reloading status
+
     public float cooldownTime = 2f; // Cooldown time between shots
     private float cooldownTimer = 0f; // Timer to track cooldown
 
-    public TMP_Text reloadingText; // TextMeshPro UI element to display reloading message
-
-    void Start()
+    private void Start()
     {
-        if (reloadingText != null)
-        {
-            reloadingText.enabled = false; // Ensure the text is initially hidden
-        }
+        reloadText.text = "Ready"; // Hide the reloading text during start
     }
 
     void Update()
@@ -45,26 +43,18 @@ public class PlayerController : MonoBehaviour
                 PlayerShoot();
                 // Reset the cooldown timer
                 cooldownTimer = cooldownTime;
-                if (reloadingText != null)
-                {
-                    reloadingText.enabled = false; // Hide reloading text when shooting
-                }
-            }
-            else
-            {
-                // Show reloading message
-                if (reloadingText != null)
-                {
-                    reloadingText.enabled = true; // Show reloading text
-                }
+                isReloading = true; // Start reloading
             }
         }
-        else
+
+        // Update the reloading text based on the reloading status
+        if (isReloading)
         {
-            // Hide reloading text when button is not pressed
-            if (reloadingText != null)
+            reloadText.text = "Reloading...";
+            if (cooldownTimer <= 0f)
             {
-                reloadingText.enabled = false;
+                isReloading = false; // Reloading complete
+                reloadText.text = "Ready"; // Hide the reloading text
             }
         }
     }

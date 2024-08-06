@@ -113,7 +113,7 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
 
         // Raycast from the specified origin
         Vector2 direction = raycastOrigin.up; // Front direction of the raycast origin
-        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin.position, direction, raycastDistance, obstacleLayer);
+        RaycastHit2D hit = Physics2D.CircleCast(raycastOrigin.position, 0.5f, transform.forward, raycastDistance, obstacleLayer);
 
         if (hit.collider != null)
         {
