@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
     public float cooldownTime = 2f; // Cooldown time between shots
     private float cooldownTimer = 0f; // Timer to track cooldown
 
+    // Sound Effects
+    public AudioClip[] shootSFX; // Array of shooting sound effects
+
     private void Start()
     {
         reloadText.text = "Ready"; // Hide the reloading text during start
@@ -87,13 +90,14 @@ public class PlayerController : MonoBehaviour
         turret.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 
-    private void PlayerShoot() // Player fires their gun
+    private void PlayerShoot()
     {
         Instantiate(tankProjectile, firePos.position, firePos.rotation);
+        PlayRandomSound(shootSFX);
         PlayExplosion();
     }
 
-    private void PlayExplosion() // Plays explosion
+    private void PlayExplosion()
     {
         // Get the player's current rotation
         Quaternion turretRotation = turret.rotation;
@@ -105,7 +109,7 @@ public class PlayerController : MonoBehaviour
         Quaternion combinedRotation = turretRotation * fixedRotation;
 
         // Define the offset distance
-        Vector3 offset = new Vector3(0, 0.5f, 0); // Adjust the offset as needed
+        Vector3 offset = new Vector3(0, 0.9f, 0); // Adjust the offset as needed
 
         // Calculate the new position with the offset
         Vector3 explosionPosition = firePos.position + firePos.right * offset.x + firePos.up * offset.y + firePos.forward * offset.z;
@@ -126,5 +130,32 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(duration);
         Destroy(explosion);
     }
-}
 
+    private void PlayRandomSound(AudioClip[] clips)
+    {
+        if (clips.Length == 0) return;
+
+        // Pick a random clip
+        AudioClip clip = clips[Random.Range(0, clips.Length)];
+        PlaySoundAtPoint(clip, transform.position);
+    }
+
+    private void PlaySoundAtPoint(AudioClip clip, Vector3 position) // Handles audio playback
+    {
+        GameObject soundGameObject = new GameObject("PlayerSFX");
+        AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+        audioSource.clip = clip;
+        audioSource.Play();
+
+        Destroy(soundGameObject, clip.length);
+    }
+
+    private void OnDestroy()
+    {
+        if (reloadText != null)
+        {
+            // Disable the reloadText game object
+            reloadText.text = "";
+        }
+    }
+}

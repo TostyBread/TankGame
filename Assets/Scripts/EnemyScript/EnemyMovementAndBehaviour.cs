@@ -16,7 +16,7 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
     public Transform turret; // Reference to the turret if the tank has one
 
     public Transform raycastOrigin; // Transform from which the raycast will be cast
-    public Transform raycastShootingPoint; // Enemy tank's firing based on their gun aligment
+    public Transform raycastShootingPoint; // Enemy tank's firing based on their gun alignment
     public float raycastDistance = 1f; // Distance of the raycast
     public LayerMask obstacleLayer; // Layer of obstacles (e.g., other tanks)
     public LayerMask playerDetector; // Layer for detecting player
@@ -27,6 +27,8 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
     public float cooldownTime = 2f; // Cooldown time between shots
     private float cooldownTimer = 0f; // Timer to track cooldown
     public GameObject explosionPrefab; // Explosion prefab
+
+    public AudioClip[] shootSFX; // Array of shooting sound effects
 
     private int currentWaypointIndex = 0; // Index of the current waypoint
     private bool isRotating = true; // Whether the tank is currently rotating
@@ -41,7 +43,7 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (waypoints.Length == 0) return;
+        if (player == null) return;
 
         CheckForPlayer(); // Check if player is in range
 
@@ -54,7 +56,6 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
 
         // Perform the raycast
         RaycastHit2D insight = Physics2D.Raycast(raycastShootingPoint.position, offsetDirection, 100f, playerDetector);
-        //Debug.DrawRay(raycastShootingPoint.position, offsetDirection * 100f, Color.red, 1f); // Raycast Debug DrawRay
 
         // Calculate the 90-degree rotation offset for the projectile
         Quaternion rotationOffset = Quaternion.Euler(0, 0, 90f); // 90-degree rotation around the Z-axis
@@ -64,7 +65,8 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
         {
             if (cooldownTimer <= 0f)
             {
-                Instantiate(tankProjectile, firePos.position, finalRotation); // Use the adjusted rotation
+                Instantiate(tankProjectile, firePos.position, finalRotation); // Use the adjusted rotation (enemy spawn projectile)
+                PlayRandomSound(shootSFX);
                 PlayExplosion();
                 // Reset the cooldown timer
                 cooldownTimer = cooldownTime;
@@ -74,7 +76,7 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
         if (isBlocked)
         {
             // Stop moving if blocked
-            if (isRotating) RotateTowardsWaypoint();
+            if (isRotating && waypoints.Length != 0) RotateTowardsWaypoint();
 
             if (playerInRange) // Still lets enemy target despite being blocked
             {
@@ -95,9 +97,8 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
                 if (hasTurret) // if enemy tank has turret
                 {
                     RotateTurretTowardsPlayer();
-                    if (!reorienting) // Only move if not reorienting
+                    if (!reorienting && waypoints.Length != 0) // Only move if not reorienting and waypoints being available
                     {
-
                         RotateTowardsWaypoint();
                         MoveTowardsWaypoint();
                     }
@@ -109,7 +110,11 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
             }
             else
             {
-                if (reorienting) // if rotate back to waypoint after rotate towards player
+                if (waypoints.Length == 0) // if there is no waypoint, simply just skip orentation 
+                {
+                    return;
+                }
+                else if (reorienting) // if rotate back to waypoint after rotate towards player
                 {
                     RotateTowardsWaypoint();
                 }
@@ -127,7 +132,7 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
 
     void CheckForPlayer()
     {
-        if (Vector2.Distance(transform.position, player.position) < spottingRange)
+        if (Vector2.Distance(transform.position, player.position) < spottingRange && player != null)
         {
             playerInRange = true;
             reorienting = false; // Stop reorienting if the player is back in range
@@ -209,7 +214,7 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
         Vector2 direction = (player.position - transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        // Apply the 90 degree offset to align the tank's forward direction
+        // Apply the 90-degree offset to align the tank's forward direction
         angle -= 90f;
 
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
@@ -222,10 +227,10 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
         if (turret == null) return;
 
         // closing up turret distance to player position
-        Vector2 direction = (player.position - turret.position).normalized; 
+        Vector2 direction = (player.position - turret.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        // Apply the 180 degree offset to align the turret's forward direction
+        // Apply the 180-degree offset to align the turret's forward direction
         angle -= 180f;
 
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
@@ -239,7 +244,7 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
         Vector2 direction = (targetWaypoint.position - transform.position).normalized; // rotate tank hull towards waypoint
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        // Apply the 90 degree offset to align the tank's forward direction
+        // Apply the 90-degree offset to align the tank's forward direction
         angle -= 90f;
 
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
@@ -258,12 +263,31 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
         if (isRotating) return; // Do not move if still rotating
 
         Transform targetWaypoint = waypoints[currentWaypointIndex]; // takes the transform coordinates from current index in array
-        transform.position = Vector2.MoveTowards(transform.position, targetWaypoint.position, moveSpeed * Time.deltaTime); 
+        transform.position = Vector2.MoveTowards(transform.position, targetWaypoint.position, moveSpeed * Time.deltaTime);
 
         if (Vector2.Distance(transform.position, targetWaypoint.position) < waypointTolerance)
         {
             currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length; // move to the next index in array of waypoints
             isRotating = true;
         }
+    }
+
+    private void PlayRandomSound(AudioClip[] clips)
+    {
+        if (clips.Length == 0) return;
+
+        // Pick a random clip
+        AudioClip clip = clips[Random.Range(0, clips.Length)];
+        PlaySoundAtPoint(clip, transform.position);
+    }
+
+    private void PlaySoundAtPoint(AudioClip clip, Vector3 position) // Handles audio playback
+    {
+        GameObject soundGameObject = new GameObject("EnemySFX");
+        AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+        audioSource.clip = clip;
+        audioSource.Play();
+
+        Destroy(soundGameObject, clip.length);
     }
 }

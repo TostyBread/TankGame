@@ -1,0 +1,57 @@
+using UnityEngine;
+
+public class EnemyMovementAndBehaviour : MonoBehaviour
+{
+    // Existing variables
+    public GameObject tankProjectile;
+    public GameObject explosionPrefab;
+
+    private ObjectPoolManager poolManager;
+
+    private void Start()
+    {
+        poolManager = FindObjectOfType<ObjectPoolManager>();
+        if (poolManager == null)
+        {
+            Debug.LogError("ObjectPoolManager not found in the scene!");
+        }
+    }
+
+    private void FireProjectile()
+    {
+        if (poolManager == null) return;
+
+        GameObject projectile = poolManager.GetObject(tankProjectile);
+        if (projectile != null)
+        {
+            projectile.transform.position = firePos.position;
+            projectile.transform.rotation = firePos.rotation;
+            projectile.GetComponent<Rigidbody2D>().velocity = firePos.up * projectileSpeed;
+        }
+    }
+
+    private void PlayExplosion()
+    {
+        if (poolManager == null) return;
+
+        Vector3 offset = new Vector3(-0.8f, 0, 0);
+        Quaternion explosionRotation = hasTurret && turret != null ? turret.rotation : transform.rotation;
+        Vector3 explosionPosition = firePos.position + firePos.right * offset.x + firePos.up * offset.y;
+
+        GameObject explosion = poolManager.GetObject(explosionPrefab);
+        if (explosion != null)
+        {
+            explosion.transform.position = explosionPosition;
+            explosion.transform.rotation = explosionRotation;
+            Animator explosionAnimator = explosion.GetComponent<Animator>();
+            float explosionDuration = explosionAnimator.GetCurrentAnimatorStateInfo(0).length;
+            StartCoroutine(DestroyAfterAnimation(explosion, explosionDuration));
+        }
+    }
+
+    private IEnumerator DestroyAfterAnimation(GameObject explosion, float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        poolManager.ReturnObject(explosion);
+    }
+}

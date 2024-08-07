@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 8460630253693972817}
   - component: {fileID: -4616395085708256147}
   - component: {fileID: -694041610801219646}
-  - component: {fileID: 2373891099577849340}
+  - component: {fileID: 1790179289724793566}
   m_Layer: 3
   m_Name: ExperimentalProjectile
   m_TagString: Untagged
@@ -159,14 +159,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 10
-  projectileLifetime: 5
-  ricochetAngleThreshold: 23.6
-  HitEnemySFX: {fileID: 0}
-  HitMiscSFX: {fileID: 0}
-  HitDestructableSFX: {fileID: 0}
+  projectileLifetime: 3.5
+  ricochetAngleThreshold: 70
+  hitTankSFX: []
+  ricochetSFX: []
+  hitMiscSFX: []
+  hitDestructableSFX: []
   hitMisc: {fileID: 5866756778443117826, guid: b77881352a3f7134d82b66ce25dc53ac, type: 3}
-  hitEnemy: {fileID: 6397874653959768597, guid: 464a6ab86b6ee10449f5585b89ff8054, type: 3}
---- !u!70 &2373891099577849340
+  hitTank: {fileID: 6397874653959768597, guid: 464a6ab86b6ee10449f5585b89ff8054, type: 3}
+  EnemyProjectile: 0
+--- !u!70 &1790179289724793566
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,7 +183,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -198,6 +200,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00080370903, y: -0.00075274706}
-  m_Size: {x: 0.09003019, y: 0.40528548}
+  m_Offset: {x: -0.0016987324, y: 0.0018604398}
+  m_Size: {x: 0.09112215, y: 0.40315855}
   m_Direction: 0
