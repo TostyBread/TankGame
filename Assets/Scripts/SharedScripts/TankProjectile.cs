@@ -7,12 +7,14 @@ public class TankProjectile : MonoBehaviour
     public float projectileSpeed = 50f; // Projectile speed
     public float projectileLifetime = 5f;
 
-    public AudioClip HitEnemySFX;
+    public AudioClip HitTankSFX;
     public AudioClip HitMiscSFX;
     public AudioClip HitDestructableSFX;
 
+    public bool EnemyProjectile = false; // A toggle to check whether projectile can damage player
+
     public GameObject hitMisc; // Explosion for misc prefab
-    public GameObject hitEnemy; // Explosion for enemy prefab
+    public GameObject hitTank; // Explosion for enemy prefab
 
     private TilemapHandler tilemapHandler; //Referes to TilemapHandler
 
@@ -25,11 +27,18 @@ public class TankProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy")) // When hit enemy
+        if (collision.CompareTag("Enemy") && !EnemyProjectile) // When hit enemy
         {
-            PlayHitAnimation(hitEnemy, collision.transform.position);
+            PlayHitAnimation(hitTank, collision.transform.position);
             Destroy(collision.gameObject);
             //PlaySoundAtPoint(HitEnemySFX, transform.position);
+            Destroy(gameObject);
+        }
+        if (collision.CompareTag("Player") && EnemyProjectile) // When hit enemy
+        {
+            PlayHitAnimation(hitTank, collision.transform.position);
+            Destroy(collision.gameObject);
+            //PlaySoundAtPoint(HitTankSFX, transform.position);
             Destroy(gameObject);
         }
         else if (collision.CompareTag("Destroyable")) // When hit destructable object

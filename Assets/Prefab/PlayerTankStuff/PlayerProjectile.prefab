@@ -160,11 +160,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 10
   projectileLifetime: 5
-  HitEnemySFX: {fileID: 0}
+  HitTankSFX: {fileID: 0}
   HitMiscSFX: {fileID: 0}
   HitDestructableSFX: {fileID: 0}
+  EnemyProjectile: 0
   hitMisc: {fileID: 5866756778443117826, guid: b77881352a3f7134d82b66ce25dc53ac, type: 3}
-  hitEnemy: {fileID: 6397874653959768597, guid: 464a6ab86b6ee10449f5585b89ff8054, type: 3}
+  hitTank: {fileID: 6397874653959768597, guid: 464a6ab86b6ee10449f5585b89ff8054, type: 3}
 --- !u!70 &6175394707826230320
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -194,7 +195,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0021560192, y: -0.000059723854}

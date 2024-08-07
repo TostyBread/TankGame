@@ -16,8 +16,17 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
     public Transform turret; // Reference to the turret if the tank has one
 
     public Transform raycastOrigin; // Transform from which the raycast will be cast
+    public Transform raycastShootingPoint; // Enemy tank's firing based on their gun aligment
     public float raycastDistance = 1f; // Distance of the raycast
     public LayerMask obstacleLayer; // Layer of obstacles (e.g., other tanks)
+    public LayerMask playerDetector; // Layer for detecting player
+
+    public GameObject tankProjectile; // Tank projectile
+    public float projectileSpeed = 50f; // Tank projectile speed
+    public Transform firePos; // Projectile spawn location
+    public float cooldownTime = 2f; // Cooldown time between shots
+    private float cooldownTimer = 0f; // Timer to track cooldown
+    public GameObject explosionPrefab; // Explosion prefab
 
     private int currentWaypointIndex = 0; // Index of the current waypoint
     private bool isRotating = true; // Whether the tank is currently rotating
@@ -35,6 +44,32 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
         if (waypoints.Length == 0) return;
 
         CheckForPlayer(); // Check if player is in range
+
+        // Update the cooldown timer
+        cooldownTimer -= Time.deltaTime;
+
+        // Calculate the direction with a 90-degree offset
+        Vector3 direction = raycastShootingPoint.up; // Original direction
+        Vector3 offsetDirection = new Vector3(-direction.y, direction.x, 0f); // 90-degree rotation to the left
+
+        // Perform the raycast
+        RaycastHit2D insight = Physics2D.Raycast(raycastShootingPoint.position, offsetDirection, 100f, playerDetector);
+        //Debug.DrawRay(raycastShootingPoint.position, offsetDirection * 100f, Color.red, 1f); // Raycast Debug DrawRay
+
+        // Calculate the 90-degree rotation offset for the projectile
+        Quaternion rotationOffset = Quaternion.Euler(0, 0, 90f); // 90-degree rotation around the Z-axis
+        Quaternion finalRotation = firePos.rotation * rotationOffset; // Apply the offset to the fire position's rotation
+
+        if (insight.collider && playerInRange)
+        {
+            if (cooldownTimer <= 0f)
+            {
+                Instantiate(tankProjectile, firePos.position, finalRotation); // Use the adjusted rotation
+                PlayExplosion();
+                // Reset the cooldown timer
+                cooldownTimer = cooldownTime;
+            }
+        }
 
         if (isBlocked)
         {
@@ -123,6 +158,49 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
         {
             isBlocked = false; // Resume movement if no obstacle is detected
         }
+    }
+
+    private void PlayExplosion()
+    {
+        // Define the explosion rotation
+        Quaternion explosionRotation;
+
+        if (hasTurret && turret != null)
+        {
+            // If the tank has a turret, use the turret's rotation
+            Quaternion turretRotation = turret.rotation;
+            Quaternion fixedRotation = Quaternion.Euler(0, 0, 0); // Fixed rotation (adjust as needed)
+            explosionRotation = turretRotation * fixedRotation;
+        }
+        else
+        {
+            // If the tank does not have a turret, use the tank's body rotation
+            Quaternion bodyRotation = transform.rotation;
+            Quaternion fixedRotation = Quaternion.Euler(0, 0, -90); // Fixed rotation (adjust as needed)
+            explosionRotation = bodyRotation * fixedRotation;
+        }
+
+        // Define the offset distance
+        Vector3 offset = new Vector3(-0.8f, 0, 0); // Adjust the offset as needed
+
+        // Calculate the new position with the offset
+        Vector3 explosionPosition = firePos.position + firePos.right * offset.x + firePos.up * offset.y + firePos.forward * offset.z;
+
+        // Instantiate the explosion with the adjusted rotation
+        GameObject explosion = Instantiate(explosionPrefab, explosionPosition, explosionRotation);
+
+        // Get the Animator component and find the duration of the explosion animation
+        Animator explosionAnimator = explosion.GetComponent<Animator>();
+        float explosionDuration = explosionAnimator.GetCurrentAnimatorStateInfo(0).length;
+
+        // Start the coroutine to destroy the explosion after the animation ends
+        StartCoroutine(DestroyAfterAnimation(explosion, explosionDuration));
+    }
+
+    private IEnumerator DestroyAfterAnimation(GameObject explosion, float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        Destroy(explosion);
     }
 
     void RotateTowardsPlayer()
