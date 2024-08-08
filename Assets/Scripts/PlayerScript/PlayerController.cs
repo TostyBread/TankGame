@@ -23,11 +23,21 @@ public class PlayerController : MonoBehaviour
     private float cooldownTimer = 0f; // Timer to track cooldown
 
     // Sound Effects
-    public AudioClip[] shootSFX; // Array of shooting sound effects
+    public AudioClip[] shootSFX; // tank shooting sfx
+    public AudioClip[] reloadedSFX; // tank reloaded sfx
+    public AudioClip movementSFX; // tank movement sfx
+
+    private bool wasMoving = false; // Track if the tank was moving last frame
+    private AudioSource movementAudioSource; // AudioSource for movement sound
 
     private void Start()
     {
         reloadText.text = "Ready"; // Hide the reloading text during start
+
+        // Initialize the AudioSource for movement sound
+        movementAudioSource = gameObject.AddComponent<AudioSource>();
+        movementAudioSource.clip = movementSFX;
+        movementAudioSource.loop = true; // Set to loop so we can control playback easily
     }
 
     void Update()
@@ -58,6 +68,7 @@ public class PlayerController : MonoBehaviour
             {
                 isReloading = false; // Reloading complete
                 reloadText.text = "Ready"; // Hide the reloading text
+                PlayRandomSound(reloadedSFX); // Play reloaded sound effect
             }
         }
     }
@@ -68,9 +79,27 @@ public class PlayerController : MonoBehaviour
         float move = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         float rotate = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
 
-        // Uses transform 
+        // Use transform 
         transform.Translate(0, move, 0);
         transform.Rotate(0, 0, -rotate);
+
+        // Determine if the tank is moving
+        bool isMoving = Mathf.Abs(move) > 0 || Mathf.Abs(rotate) > 0;
+
+        // Play movement sound if moving and not already playing
+        if (isMoving && !wasMoving)
+        {
+            movementAudioSource.Play(); // Start the movement sound
+        }
+
+        // Stop movement sound if not moving and was playing
+        if (!isMoving && wasMoving)
+        {
+            movementAudioSource.Stop(); // Stop the movement sound
+        }
+
+        // Update the flag
+        wasMoving = isMoving;
     }
 
     private void TurretRotation()

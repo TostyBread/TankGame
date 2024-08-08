@@ -17,6 +17,7 @@ public class TankProjectileExperimental : MonoBehaviour
     public GameObject hitTank; // Explosion for enemy prefab
 
     public bool EnemyProjectile = false; // A toggle to check whether projectile can damage player
+    public int shellDamage = 1; // Damage input here
 
     private TilemapHandler tilemapHandler; // References to TilemapHandler
     private Rigidbody2D rb;
@@ -36,11 +37,11 @@ public class TankProjectileExperimental : MonoBehaviour
     {
         if (collision.collider.CompareTag("Enemy") && !EnemyProjectile) // When hit enemy
         {
-            HandleCollision(collision, hitTankSFX, hitTank, 1); // Assuming 1 damage points
+            HandleCollision(collision, hitTankSFX, hitTank, shellDamage); // Assuming 1 damage points
         }
         else if (collision.collider.CompareTag("Player") && EnemyProjectile) // When hit player
         {
-            HandleCollision(collision, hitTankSFX, hitTank, 1); // Assuming 1 damage points
+            HandleCollision(collision, hitTankSFX, hitTank, shellDamage); // Assuming 1 damage points
         }
         else if (collision.collider.CompareTag("Destroyable")) // When hit destructible object
         {

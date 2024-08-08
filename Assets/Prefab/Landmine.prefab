@@ -155,5 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa292cb1cbc15124ba7679829f130673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionSFX: []
+  explosionSFX:
+  - {fileID: 8300000, guid: 0799921e12cdb96458361204880515c1, type: 3}
+  - {fileID: 8300000, guid: 4c9c305abbdbaa642a1188623e23e96e, type: 3}
+  - {fileID: 8300000, guid: 1b66da59dd0fff048a0b6ef3b265a78e, type: 3}
   explosion: {fileID: 7642766423041939795, guid: 9a6b097378cd6e84e8dbb830b3355044, type: 3}

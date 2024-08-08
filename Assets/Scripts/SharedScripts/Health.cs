@@ -4,7 +4,7 @@ public class Health : MonoBehaviour
 {
     public int hitpoints = 3; // Default hitpoints
     public GameObject destructionEffectPrefab; // Prefab for destruction effect (animation and sound)
-    public AudioClip destructionSound; // Sound to play on destruction
+    public AudioClip[] destructionSounds; // Array of sounds to play on destruction
 
     public void TakeDamage(int damage)
     {
@@ -35,10 +35,11 @@ public class Health : MonoBehaviour
                 Destroy(effect);
             }
 
-            // Play sound effect
-            if (destructionSound != null)
+            // Play a random sound effect
+            if (destructionSounds.Length > 0)
             {
-                AudioSource.PlayClipAtPoint(destructionSound, transform.position);
+                AudioClip randomClip = destructionSounds[Random.Range(0, destructionSounds.Length)];
+                AudioSource.PlayClipAtPoint(randomClip, transform.position);
             }
 
             // Destroy the GameObject after a short delay to ensure effects play
@@ -51,3 +52,4 @@ public class Health : MonoBehaviour
         }
     }
 }
+
