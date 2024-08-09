@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class UIManager : MonoBehaviour
@@ -11,7 +10,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI timerText; // Reference to the UI Text component for the timer
 
     private float timer;
-    private bool isTimerRunning;
+    public bool isTimerRunning = true;
 
     private void Start()
     {
@@ -21,7 +20,6 @@ public class UIManager : MonoBehaviour
 
         // Initialize timer
         timer = 0f;
-        isTimerRunning = true;
     }
 
     private void Update()
@@ -35,13 +33,17 @@ public class UIManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Check game over conditions here, if applicable
         if (defaultTankStatus == null || specialTankStatus == null)
         {
-            ShowGameOver();
+            if (isTimerRunning) // Ensure it only triggers once
+            {
+                ShowGameOver();
+            }
         }
     }
 
-    private void UpdateTimerText()
+    public void UpdateTimerText()
     {
         // Format the timer as minutes:seconds
         int minutes = Mathf.FloorToInt(timer / 60);
@@ -51,13 +53,12 @@ public class UIManager : MonoBehaviour
 
     public void ShowGameOver()
     {
+        if (!isTimerRunning) return; // Prevent multiple calls
+
         isTimerRunning = false; // Stop the timer
+        UpdateTimerText();      // Ensure the timer text is up-to-date
         gameOverPanel.SetActive(true);
     }
 
-    public void ShowVictory()
-    {
-        isTimerRunning = false; // Stop the timer
-        victoryPanel.SetActive(true);
-    }
 }
+

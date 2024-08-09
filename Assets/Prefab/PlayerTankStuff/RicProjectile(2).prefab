@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 10
-  projectileLifetime: 3.5
+  projectileLifetime: 3
   ricochetAngleThreshold: 70
   hitTankSFX:
   - {fileID: 8300000, guid: abfd255f30b26d64c8308c7d7fe867ce, type: 3}

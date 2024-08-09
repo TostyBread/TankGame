@@ -194,7 +194,9 @@ public class ZoneManager : MonoBehaviour
 
     void ShowVictoryScreen()
     {
+        
+        uIManager.isTimerRunning = false; // Stop the timer
+        uIManager.UpdateTimerText();      // Ensure the timer text is up-to-date
         uIManager.victoryPanel.SetActive(true); // When player win, activate the victory panel
     }
 }
-
