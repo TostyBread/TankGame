@@ -19,6 +19,11 @@ public class BackgroundMusicManager : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>();
         }
 
+        foreach (var clip in musicClips) //Pre-load all music data first.
+        {
+            clip.LoadAudioData();
+        }
+
         if (musicClips.Length > 0)
         {
             audioSource.clip = musicClips[currentClipIndex];
@@ -26,6 +31,7 @@ public class BackgroundMusicManager : MonoBehaviour
             audioSource.volume = volume; // Set initial volume
         }
     }
+
 
     void Update()
     {

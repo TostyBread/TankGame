@@ -169,17 +169,14 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
     {
         // Define the explosion rotation
         Quaternion explosionRotation;
-
         if (hasTurret && turret != null)
         {
-            // If the tank has a turret, use the turret's rotation
             Quaternion turretRotation = turret.rotation;
             Quaternion fixedRotation = Quaternion.Euler(0, 0, 0); // Fixed rotation (adjust as needed)
             explosionRotation = turretRotation * fixedRotation;
         }
         else
         {
-            // If the tank does not have a turret, use the tank's body rotation
             Quaternion bodyRotation = transform.rotation;
             Quaternion fixedRotation = Quaternion.Euler(0, 0, -90); // Fixed rotation (adjust as needed)
             explosionRotation = bodyRotation * fixedRotation;
@@ -187,24 +184,24 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
 
         // Define the offset distance
         Vector3 offset = new Vector3(-0.8f, 0, 0); // Adjust the offset as needed
-
-        // Calculate the new position with the offset
         Vector3 explosionPosition = firePos.position + firePos.right * offset.x + firePos.up * offset.y + firePos.forward * offset.z;
 
-        // Instantiate the explosion with the adjusted rotation
-        GameObject explosion = Instantiate(explosionPrefab, explosionPosition, explosionRotation);
-
-        // Get the Animator component and find the duration of the explosion animation
-        Animator explosionAnimator = explosion.GetComponent<Animator>();
-        float explosionDuration = explosionAnimator.GetCurrentAnimatorStateInfo(0).length;
-
-        // Start the coroutine to destroy the explosion after the animation ends
-        StartCoroutine(DestroyAfterAnimation(explosion, explosionDuration));
+        // Start the coroutine to handle explosion lifecycle
+        StartCoroutine(HandleExplosion(explosionPosition, explosionRotation));
     }
 
-    private IEnumerator DestroyAfterAnimation(GameObject explosion, float duration)
+    private IEnumerator HandleExplosion(Vector3 position, Quaternion rotation)
     {
-        yield return new WaitForSeconds(duration);
+        GameObject explosion = Instantiate(explosionPrefab, position, rotation);
+        Animator explosionAnimator = explosion.GetComponent<Animator>();
+
+        float explosionDuration = 0f;
+        if (explosionAnimator != null)
+        {
+            explosionDuration = explosionAnimator.GetCurrentAnimatorStateInfo(0).length;
+        }
+
+        yield return new WaitForSeconds(explosionDuration);
         Destroy(explosion);
     }
 

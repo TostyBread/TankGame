@@ -45,7 +45,8 @@ public class TankProjectileExperimental : MonoBehaviour
         }
         else if (collision.collider.CompareTag("Destroyable")) // When hit destructible object
         {
-            tilemapHandler.RemoveTile(transform.position);
+            Vector3 contactPoint = collision.contacts[0].point;
+            tilemapHandler.RemoveTile(contactPoint);
             PlayRandomSound(hitDestructableSFX);
             Destroy(gameObject);
         }
