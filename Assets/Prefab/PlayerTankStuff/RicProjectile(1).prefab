@@ -186,7 +186,7 @@ MonoBehaviour:
   hitMisc: {fileID: 5866756778443117826, guid: b77881352a3f7134d82b66ce25dc53ac, type: 3}
   hitTank: {fileID: 6397874653959768597, guid: 464a6ab86b6ee10449f5585b89ff8054, type: 3}
   EnemyProjectile: 0
-  shellDamage: 3
+  shellDamage: 1
 --- !u!70 &1790179289724793566
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -6,7 +6,8 @@ public class UIManager : MonoBehaviour
 {
     public GameObject gameOverPanel;
     public GameObject victoryPanel;
-    public GameObject playerStatus;
+    public GameObject defaultTankStatus;
+    public GameObject specialTankStatus;
     public TextMeshProUGUI timerText; // Reference to the UI Text component for the timer
 
     private float timer;
@@ -34,7 +35,7 @@ public class UIManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (playerStatus == null)
+        if (defaultTankStatus == null || specialTankStatus == null)
         {
             ShowGameOver();
         }

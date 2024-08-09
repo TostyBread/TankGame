@@ -4,7 +4,8 @@ public class BackgroundMusicManager : MonoBehaviour
 {
     public AudioClip[] musicClips; // Array to hold the WAV audio clips
     private AudioSource audioSource; // Reference to the AudioSource component
-    public Transform player; // Reference to the player's Transform
+    public Transform playerLocation; // Reference to the player's Transform
+    public GameObject playerTank; // Reference to whether player tank is active in hierarchy
     public float triggerXPosition = 38.0f; // X-axis position to trigger the music start
     [Range(0.0f, 1.0f)] public float volume = 0.5f; // Volume control, range between 0.0 and 1.0
 
@@ -35,10 +36,10 @@ public class BackgroundMusicManager : MonoBehaviour
 
     void Update()
     {
-        if (player == null) return; // if player died, ignore it
+        if (playerLocation == null || !playerTank.activeInHierarchy) return; // if player died, ignore it
 
         // Check if the player has moved past the specified x-axis position
-        if (!musicStarted && player.position.x > triggerXPosition)
+        if (!musicStarted && playerLocation.position.x > triggerXPosition)
         {
             PlayNextClip();
             musicStarted = true;
@@ -59,7 +60,7 @@ public class BackgroundMusicManager : MonoBehaviour
 
     void PlayNextClip()
     {
-        if (musicClips.Length == 0) return;
+        if (musicClips.Length == 0 || !playerTank.activeInHierarchy) return;
 
         // Move to the next clip
         currentClipIndex = (currentClipIndex + 1) % musicClips.Length;

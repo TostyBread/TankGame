@@ -10,7 +10,8 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
     public float turretRotationSpeed = 30f; // Turret rotation speed
     public float waypointTolerance = 0.1f; // How close the tank needs to be to consider it has reached the waypoint
 
-    public Transform player; // Reference to the player
+    private Transform player;
+    private const string playerTag = "Player";
     public float spottingRange = 5f; // Range within which the enemy spots the player
     public bool hasTurret = false; // Whether the tank has a turret
     public Transform turret; // Reference to the turret if the tank has one
@@ -36,6 +37,12 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
     private bool reorienting = false; // Whether the tank is reorienting to the waypoint
     private bool isBlocked = false; // Whether the tank is blocked by another tank
 
+    private void Start()
+    {
+        // Initialize player reference
+        UpdatePlayerTarget();
+    }
+
     void FixedUpdate()
     {
         CheckForObstacles(); // Check for obstacles using raycast
@@ -43,6 +50,10 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
 
     void Update()
     {
+
+        // Update player reference in case the active player changes
+        UpdatePlayerTarget();
+
         if (player == null) return;
 
         CheckForPlayer(); // Check if player is in range
@@ -130,6 +141,15 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
         }
     }
 
+    private void UpdatePlayerTarget()
+    {
+        GameObject playerObject = GameObject.FindGameObjectWithTag(playerTag);
+        if (playerObject != null)
+        {
+            player = playerObject.transform;
+        }
+    }
+
     void CheckForPlayer()
     {
         if (Vector2.Distance(transform.position, player.position) < spottingRange && player != null)
@@ -201,9 +221,16 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
             explosionDuration = explosionAnimator.GetCurrentAnimatorStateInfo(0).length;
         }
 
+        // Wait for the explosion animation to finish
         yield return new WaitForSeconds(explosionDuration);
-        Destroy(explosion);
+
+        // Check if the explosion GameObject is still valid before destroying it
+        if (explosion != null)
+        {
+            Destroy(explosion);
+        }
     }
+
 
     void RotateTowardsPlayer()
     {

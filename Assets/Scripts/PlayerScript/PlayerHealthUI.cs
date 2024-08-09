@@ -1,10 +1,10 @@
-using System.Collections; // Required for IEnumerator
-using TMPro; // Required for TextMeshProUGUI
+using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class PlayerHealthUI : MonoBehaviour
 {
-    public Health playerHealth; // Reference to the player health script
+    public GameObject playerHealthGameObject; // Reference to the playerHealth GameObject
     public TextMeshProUGUI hitpointsText; // Reference to the UI text element
     public float flashInterval = 0.5f; // Interval for flashing text
     private Color originalColor;
@@ -16,53 +16,74 @@ public class PlayerHealthUI : MonoBehaviour
         {
             originalColor = hitpointsText.color;
         }
+
+        UpdateHealthDisplay(); // Initialize health display
     }
 
     private void Update()
     {
-        if (playerHealth != null)
+        UpdateHealthDisplay(); // Update health display based on the current tank
+    }
+
+    private void UpdateHealthDisplay()
+    {
+        if (playerHealthGameObject == null || !playerHealthGameObject.activeInHierarchy)
         {
-            if (playerHealth.hitpoints <= 0)
+            // Deactivate hitpointsText if playerHealthGameObject is null or inactive
+            hitpointsText.gameObject.SetActive(false);
+            return; // Exit the method early since there's no need to update the UI
+        }
+
+        Health currentHealth = playerHealthGameObject.GetComponent<Health>();
+
+        if (currentHealth == null)
+        {
+            // Handle the case where the playerHealth component is missing
+            hitpointsText.gameObject.SetActive(false);
+            return;
+        }
+
+        if (currentHealth.hitpoints <= 0)
+        {
+            // Hide the text if hitpoints are zero or less
+            hitpointsText.gameObject.SetActive(false);
+        }
+        else
+        {
+            // Update the text and handle flashing if hitpoints are greater than zero
+            hitpointsText.text = "HP: " + currentHealth.hitpoints;
+
+            if (currentHealth.hitpoints == 1)
             {
-                // Hide the text if hitpoints are zero or less
-                hitpointsText.gameObject.SetActive(false);
+                if (!isFlashing)
+                {
+                    StartCoroutine(FlashHitpointsText());
+                }
             }
             else
             {
-                // Update the text and handle flashing if hitpoints are greater than zero
-                hitpointsText.text = "HP: " + playerHealth.hitpoints;
-
-                if (playerHealth.hitpoints == 1)
-                {
-                    if (!isFlashing)
-                    {
-                        StartCoroutine(FlashHitpointsText());
-                    }
-                }
-                else
-                {
-                    StopAllCoroutines();
-                    hitpointsText.color = originalColor;
-                    isFlashing = false;
-                }
-
-                // Make sure the text is visible if hitpoints are more than zero
-                hitpointsText.gameObject.SetActive(true);
+                StopAllCoroutines();
+                hitpointsText.color = originalColor;
+                isFlashing = false;
             }
+
+            // Make sure the text is visible if hitpoints are more than zero
+            hitpointsText.gameObject.SetActive(true);
         }
     }
 
     private IEnumerator FlashHitpointsText()
     {
         isFlashing = true;
-        while (playerHealth.hitpoints == 1)
+
+        while (playerHealthGameObject.activeInHierarchy) // Flash only if playerHealthGameObject is active
         {
             hitpointsText.color = hitpointsText.color == originalColor ? Color.red : originalColor;
             yield return new WaitForSeconds(flashInterval);
         }
+
         // Ensure the text color is reset after exiting the loop
         hitpointsText.color = originalColor;
         isFlashing = false;
     }
 }
-

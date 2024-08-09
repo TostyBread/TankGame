@@ -13,7 +13,8 @@ public class ZoneManager : MonoBehaviour
     }
 
     public Zone[] zones; // Array to hold the different zones
-    public GameObject player; // Reference to the player
+    public GameObject defaultTank; // Reference to the player
+    public GameObject specialTank;
     public TextMeshProUGUI warningText; // UI TextMeshPro to display warnings
     public TextMeshProUGUI completionText; // UI TextMeshPro to display completion messages
     public float returnTime = 5f; // Time allowed for player to return to the zone before being destroyed
@@ -49,7 +50,7 @@ public class ZoneManager : MonoBehaviour
 
     void Update()
     {
-        if (player == null) return; // When player died, do nothing
+        if (defaultTank == null || specialTank == null) return; // When player died, do nothing
 
 
         if (currentZoneIndex < zones.Length)
@@ -100,9 +101,10 @@ public class ZoneManager : MonoBehaviour
         if (zones.Length == 0) return;
 
         Zone currentZone = zones[currentZoneIndex];
-        float playerX = player.transform.position.x;
+        float playerX = defaultTank.transform.position.x;
+        float playerXtoo = specialTank.transform.position.x;
 
-        if (playerX < currentZone.xMin || playerX > currentZone.xMax)
+        if (playerX < currentZone.xMin || playerX > currentZone.xMax || playerXtoo < currentZone.xMin || playerXtoo > currentZone.xMax)
         {
             if (!isWarningActive)
             {
