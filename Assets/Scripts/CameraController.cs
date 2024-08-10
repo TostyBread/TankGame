@@ -14,8 +14,12 @@ public class CameraController : MonoBehaviour
     private string currentInput = "";
     private float popupDuration = 3f; // Duration for which the text will be displayed
 
+    UIController uiController; // reference UI controller
+
     private void Start()
     {
+        uiController = GetComponent<UIController>();
+
         SetFollowTarget(defaultTank);
         if (popupText != null)
         {
@@ -81,6 +85,7 @@ public class CameraController : MonoBehaviour
             defaultTank.SetActive(false);
             specialTank.SetActive(true);
             SetFollowTarget(specialTank);
+            uiController.tank = GameObject.FindGameObjectWithTag("Player").transform;
 
             // Show the popup text
             if (popupText != null)
