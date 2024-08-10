@@ -16,7 +16,7 @@ public class BriefingStuff : MonoBehaviour
     {
         if (gameObjects.Length != probabilities.Length)
         {
-            Debug.LogError("GameObjects and probabilities array must be of the same length!");
+            //Debug.LogError("GameObjects and probabilities array must be of the same length!");
             return;
         }
 
@@ -68,7 +68,7 @@ public class BriefingStuff : MonoBehaviour
     {
         if (uncoverBlind == null)
         {
-            Debug.LogError("Object to move is not assigned!");
+            //Debug.LogError("Object to move is not assigned!");
             return;
         }
 

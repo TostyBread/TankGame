@@ -12,10 +12,10 @@ public class DynamicCameraOffsetController : MonoBehaviour
     {
         // Get the CinemachineCameraOffset component from the virtual camera
         cameraOffsetComponent = virtualCamera.GetComponent<CinemachineCameraOffset>();
-        if (cameraOffsetComponent == null)
-        {
-            Debug.LogError("CinemachineCameraOffset component not found on the virtual camera.");
-        }
+        //if (cameraOffsetComponent == null)
+        //{
+        //    Debug.LogError("CinemachineCameraOffset component not found on the virtual camera.");
+        //}
     }
 
     private void Update()

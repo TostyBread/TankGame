@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
         if (hitpoints <= 0)
         {
             Die();
-            enemyMovementAndBehaviour.isDead = true;
+            enemyMovementAndBehaviour.isDead = true; // Refer enemyMovementAndBehaviour script that enemy cannot move or shoot
         }
     }
 
