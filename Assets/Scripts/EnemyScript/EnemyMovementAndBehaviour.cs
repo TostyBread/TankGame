@@ -37,6 +37,8 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
     private bool reorienting = false; // Whether the tank is reorienting to the waypoint
     private bool isBlocked = false; // Whether the tank is blocked by another tank
 
+    public bool isDead = false; // Determine so that it restrict enemy movement
+
     private void Start()
     {
         // Initialize player reference
@@ -50,6 +52,7 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
 
     void Update()
     {
+        if (isDead) return; // If enemy health reaches 0, disable all the controls
 
         // Update player reference in case the active player changes
         UpdatePlayerTarget();

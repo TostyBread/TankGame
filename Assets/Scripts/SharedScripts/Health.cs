@@ -6,12 +6,20 @@ public class Health : MonoBehaviour
     public GameObject destructionEffectPrefab; // Prefab for destruction effect (animation and sound)
     public AudioClip[] destructionSounds; // Array of sounds to play on destruction
 
+    EnemyMovementAndBehaviour enemyMovementAndBehaviour; // Mention EnemyMovementAndBehaviour
+
+    private void Start()
+    {
+        enemyMovementAndBehaviour = GetComponent<EnemyMovementAndBehaviour>();
+    }
+
     public void TakeDamage(int damage)
     {
         hitpoints -= damage;
         if (hitpoints <= 0)
         {
             Die();
+            enemyMovementAndBehaviour.isDead = true;
         }
     }
 
