@@ -9,6 +9,9 @@ public class UIManager : MonoBehaviour
     public GameObject specialTankStatus;
     public TextMeshProUGUI timerText; // Reference to the UI Text component for the timer
 
+    public AudioSource audioSource; // Reference to the AudioSource component
+    public AudioClip gameOverSound; // Reference to the Game Over sound clip
+
     private float timer;
     public bool isTimerRunning = true;
 
@@ -20,6 +23,11 @@ public class UIManager : MonoBehaviour
 
         // Initialize timer
         timer = 0f;
+
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>(); // Reference AudioSource if not assigned in the Inspector
+        }
     }
 
     private void Update()
@@ -58,7 +66,14 @@ public class UIManager : MonoBehaviour
         isTimerRunning = false; // Stop the timer
         UpdateTimerText();      // Ensure the timer text is up-to-date
         gameOverPanel.SetActive(true);
+        PlaySound(gameOverSound); // Play game over sound
     }
 
+    private void PlaySound(AudioClip clip)
+    {
+        if (audioSource && clip)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
 }
-

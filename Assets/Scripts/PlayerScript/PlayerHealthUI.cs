@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHealthUI : MonoBehaviour
 {
     public GameObject playerHealthGameObject; // Reference to the playerHealth GameObject
+    public GameObject UIOvershade; // Background shade for UI
     public TextMeshProUGUI hitpointsText; // Reference to the UI text element
     public float flashInterval = 0.5f; // Interval for flashing text
     private Color originalColor;
@@ -17,6 +18,8 @@ public class PlayerHealthUI : MonoBehaviour
             originalColor = hitpointsText.color;
         }
 
+        UIOvershade.SetActive(true); // Toggle on shade at start
+
         UpdateHealthDisplay(); // Initialize health display
     }
 
@@ -27,10 +30,14 @@ public class PlayerHealthUI : MonoBehaviour
 
     private void UpdateHealthDisplay()
     {
+        // Check if playerHealthGameObject is valid and active
         if (playerHealthGameObject == null || !playerHealthGameObject.activeInHierarchy)
         {
             // Deactivate hitpointsText if playerHealthGameObject is null or inactive
-            hitpointsText.gameObject.SetActive(false);
+            if (hitpointsText != null)
+            {
+                hitpointsText.gameObject.SetActive(false);
+            }
             return; // Exit the method early since there's no need to update the UI
         }
 
@@ -39,51 +46,68 @@ public class PlayerHealthUI : MonoBehaviour
         if (currentHealth == null)
         {
             // Handle the case where the playerHealth component is missing
-            hitpointsText.gameObject.SetActive(false);
+            if (hitpointsText != null)
+            {
+                hitpointsText.gameObject.SetActive(false);
+            }
             return;
         }
 
         if (currentHealth.hitpoints <= 0)
         {
             // Hide the text if hitpoints are zero or less
-            hitpointsText.gameObject.SetActive(false);
+            if (hitpointsText != null)
+            {
+                hitpointsText.gameObject.SetActive(false);
+                UIOvershade.SetActive(false);
+            }
         }
         else
         {
             // Update the text and handle flashing if hitpoints are greater than zero
-            hitpointsText.text = "HP: " + currentHealth.hitpoints;
-
-            if (currentHealth.hitpoints == 1)
+            if (hitpointsText != null)
             {
-                if (!isFlashing)
+                hitpointsText.text = "HP: " + currentHealth.hitpoints;
+
+                if (currentHealth.hitpoints <= 3)
                 {
-                    StartCoroutine(FlashHitpointsText());
+                    if (!isFlashing)
+                    {
+                        StartCoroutine(FlashHitpointsText());
+                    }
                 }
-            }
-            else
-            {
-                StopAllCoroutines();
-                hitpointsText.color = originalColor;
-                isFlashing = false;
-            }
+                else
+                {
+                    StopAllCoroutines();
+                    hitpointsText.color = originalColor;
+                    isFlashing = false;
+                }
 
-            // Make sure the text is visible if hitpoints are more than zero
-            hitpointsText.gameObject.SetActive(true);
+                // Make sure the text is visible if hitpoints are more than zero
+                hitpointsText.gameObject.SetActive(true);
+            }
         }
     }
 
     private IEnumerator FlashHitpointsText()
     {
+        if (hitpointsText == null) yield break; // Check if hitpointsText is null
+
         isFlashing = true;
 
-        while (playerHealthGameObject.activeInHierarchy) // Flash only if playerHealthGameObject is active
+        while (playerHealthGameObject != null && playerHealthGameObject.activeInHierarchy)
         {
+            if (hitpointsText == null) yield break; // Check if hitpointsText is null
+
             hitpointsText.color = hitpointsText.color == originalColor ? Color.red : originalColor;
             yield return new WaitForSeconds(flashInterval);
         }
 
         // Ensure the text color is reset after exiting the loop
-        hitpointsText.color = originalColor;
+        if (hitpointsText != null)
+        {
+            hitpointsText.color = originalColor;
+        }
         isFlashing = false;
     }
 }

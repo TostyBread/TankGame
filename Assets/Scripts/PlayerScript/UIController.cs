@@ -15,6 +15,8 @@ public class UIController : MonoBehaviour
 
     private void Update()
     {
+        if (tank == null) return;
+
         PositionUI();
     }
 

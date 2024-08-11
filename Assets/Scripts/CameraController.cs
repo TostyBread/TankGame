@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
     public CinemachineVirtualCamera virtualCamera;
     public GameObject defaultTank;
     public GameObject specialTank;
-    public TextMeshProUGUI popupText; // Add this line
+    public GameObject popupText; // Add this line
 
     private string cheatCode = "halo";
     private string currentInput = "";
@@ -23,7 +23,7 @@ public class CameraController : MonoBehaviour
         SetFollowTarget(defaultTank);
         if (popupText != null)
         {
-            popupText.gameObject.SetActive(false); // Ensure the text is initially hidden
+            popupText.SetActive(false); // Ensure the text is initially hidden
         }
     }
 
@@ -34,6 +34,9 @@ public class CameraController : MonoBehaviour
 
     private void DetectInput()
     {
+        //if either player tank has been destroy or the specialTank has already spawned, ignore cheat input
+        if (defaultTank == null || specialTank == null || specialTank.activeInHierarchy) return;
+
         if (Input.anyKeyDown)
         {
             foreach (KeyCode keyCode in System.Enum.GetValues(typeof(KeyCode)))
@@ -97,8 +100,8 @@ public class CameraController : MonoBehaviour
 
     private IEnumerator ShowPopupText()
     {
-        popupText.gameObject.SetActive(true); // Show the text
+        popupText.SetActive(true); // Show the text
         yield return new WaitForSeconds(popupDuration); // Wait for the specified duration
-        popupText.gameObject.SetActive(false); // Hide the text
+        popupText.SetActive(false); // Hide the text
     }
 }

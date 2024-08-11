@@ -19,10 +19,12 @@ public class Health : MonoBehaviour
         if (hitpoints <= 0)
         {
             Die();
-            enemyMovementAndBehaviour.isDead = true; // Refer enemyMovementAndBehaviour script that enemy cannot move or shoot
+            if (enemyMovementAndBehaviour != null)
+            {
+                enemyMovementAndBehaviour.isDead = true; // Safely refer to enemyMovementAndBehaviour
+            }
         }
     }
-
     private void Die()
     {
         if (destructionEffectPrefab != null)

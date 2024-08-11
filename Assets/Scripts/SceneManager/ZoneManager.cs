@@ -16,9 +16,16 @@ public class ZoneManager : MonoBehaviour
     public GameObject defaultTank; // Reference to the player
     public GameObject specialTank;
     public TextMeshProUGUI warningText; // UI TextMeshPro to display warnings
+    public GameObject warningTextShade; 
     public TextMeshProUGUI completionText; // UI TextMeshPro to display completion messages
+    public GameObject completionTextShade;
     public float returnTime = 5f; // Time allowed for player to return to the zone before being destroyed
     public float completionDisplayTime = 3f; // Time to display the completion message
+
+    // Audio Sources and Clips
+    public AudioSource audioSource;
+    public AudioClip completionSound;
+    public AudioClip victorySound;
 
     private int currentZoneIndex = 0; // Index of the currently active zone
     private bool isWarningActive = false;
@@ -34,6 +41,9 @@ public class ZoneManager : MonoBehaviour
     {
         uIManager = GetComponent<UIManager>(); // Reference UIManager
 
+        completionTextShade.SetActive(false);
+        warningTextShade.SetActive(false);
+
         // Initialize all zones to inactive
         foreach (Zone zone in zones)
         {
@@ -46,12 +56,16 @@ public class ZoneManager : MonoBehaviour
         }
         warningText.gameObject.SetActive(false);
         completionText.gameObject.SetActive(false);
+
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>(); // Reference AudioSource if not assigned in the Inspector
+        }
     }
 
     void Update()
     {
         if (defaultTank == null || specialTank == null) return; // When player died, do nothing
-
 
         if (currentZoneIndex < zones.Length)
         {
@@ -76,6 +90,7 @@ public class ZoneManager : MonoBehaviour
             else
             {
                 zoneCleared = false; // Reset flag if enemies are not cleared yet
+
             }
 
             if (isCompletionMessageActive)
@@ -86,11 +101,13 @@ public class ZoneManager : MonoBehaviour
                 {
                     // Hide completion message after the display time
                     completionText.gameObject.SetActive(false);
+                    completionTextShade.SetActive(false);
                     isCompletionMessageActive = false;
                     completionTimer = 0f;
 
                     // Activate the next zone
                     ActivateNextZone();
+                    completionText.gameObject.SetActive(false);
                 }
             }
         }
@@ -110,6 +127,7 @@ public class ZoneManager : MonoBehaviour
             {
                 // Start warning sequence
                 warningText.gameObject.SetActive(true);
+                warningTextShade.SetActive(true);
                 isWarningActive = true;
             }
 
@@ -135,6 +153,7 @@ public class ZoneManager : MonoBehaviour
             if (isWarningActive)
             {
                 warningText.gameObject.SetActive(false);
+                warningTextShade.SetActive(false);
                 isWarningActive = false;
                 warningTimer = 0f;
             }
@@ -180,23 +199,35 @@ public class ZoneManager : MonoBehaviour
         if (currentZoneIndex < zones.Length - 1) // Intermediate zones
         {
             completionText.gameObject.SetActive(true);
-            completionText.text = "All enemies in this area has been eliminated, advance!";
+            completionTextShade.SetActive(true);
+            completionText.text = "All enemies in this area have been eliminated, advance!";
             isCompletionMessageActive = true;
+            PlaySound(completionSound);
         }
     }
 
     void ShowAreaSecuredMessage()
     {
         completionText.gameObject.SetActive(true);
-        completionText.text = "All enemies has been destoryed, we've secured the area!";
+        completionTextShade.SetActive(true);
+        completionText.text = "All enemies have been destroyed, we've secured the area!";
         isCompletionMessageActive = true;
+        PlaySound(completionSound);
     }
 
     void ShowVictoryScreen()
     {
-        
         uIManager.isTimerRunning = false; // Stop the timer
         uIManager.UpdateTimerText();      // Ensure the timer text is up-to-date
-        uIManager.victoryPanel.SetActive(true); // When player win, activate the victory panel
+        uIManager.victoryPanel.SetActive(true); // When player wins, activate the victory panel
+        PlaySound(victorySound);
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        if (audioSource && clip)
+        {
+            audioSource.PlayOneShot(clip);
+        }
     }
 }

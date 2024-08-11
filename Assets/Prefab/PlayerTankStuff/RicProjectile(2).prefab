@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 10
   projectileLifetime: 3
-  ricochetAngleThreshold: 70
+  ricochetAngleThreshold: 75
   hitTankSFX:
   - {fileID: 8300000, guid: abfd255f30b26d64c8308c7d7fe867ce, type: 3}
   - {fileID: 8300000, guid: c509462c5cba0c54aa40a699852ba7cc, type: 3}
@@ -202,7 +202,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 768
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
