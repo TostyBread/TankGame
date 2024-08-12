@@ -73,6 +73,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool IsMoving() // Reference to TankEngineSFX
+    {
+        float move = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        float rotate = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
+
+        return Mathf.Abs(move) > 0 || Mathf.Abs(rotate) > 0;
+    }
+
     private void PlayerMovement()
     {
         // Handles tank move and turn control

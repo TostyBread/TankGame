@@ -1,24 +1,43 @@
 using System.Collections;
 using UnityEngine;
 using Cinemachine;
-using TMPro;
 
 public class CameraController : MonoBehaviour
 {
     public CinemachineVirtualCamera virtualCamera;
     public GameObject defaultTank;
     public GameObject specialTank;
-    public GameObject popupText; // Add this line
+    public GameObject popupText;
+    public AudioClip cheatActivatedSFX;
+    public float xMinActivationCheat; // Minimum x-axis value before cheat can be activated
 
     private string cheatCode = "halo";
     private string currentInput = "";
     private float popupDuration = 3f; // Duration for which the text will be displayed
 
     UIController uiController; // reference UI controller
+    public AudioSource audioSource;
+
+    public bool IsFollowingSpecialTank
+    {
+        get
+        {
+            if (virtualCamera == null || virtualCamera.Follow == null)
+            {
+                return false;
+            }
+            return virtualCamera.Follow.gameObject == specialTank;
+        }
+    }
 
     private void Start()
     {
         uiController = GetComponent<UIController>();
+
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>(); // Reference AudioSource if not assigned in the Inspector
+        }
 
         SetFollowTarget(defaultTank);
         if (popupText != null)
@@ -34,8 +53,9 @@ public class CameraController : MonoBehaviour
 
     private void DetectInput()
     {
-        //if either player tank has been destroy or the specialTank has already spawned, ignore cheat input
-        if (defaultTank == null || specialTank == null || specialTank.activeInHierarchy) return;
+        if (defaultTank == null || specialTank == null || specialTank.activeInHierarchy) return; // if player has already entered the cheat or tanks already destroyed, ignore it
+
+        float playerX = defaultTank.transform.position.x;
 
         if (Input.anyKeyDown)
         {
@@ -50,10 +70,11 @@ public class CameraController : MonoBehaviour
                 }
             }
 
-            if (currentInput.EndsWith(cheatCode))
+            if (currentInput.EndsWith(cheatCode) && playerX > xMinActivationCheat) //If current input ends with cheat code and player is outside of minimum range
             {
                 SwitchTank(false);
                 currentInput = "";
+                PlaySound(cheatActivatedSFX);
             }
         }
 
@@ -95,6 +116,14 @@ public class CameraController : MonoBehaviour
             {
                 StartCoroutine(ShowPopupText());
             }
+        }
+    }
+
+    void PlaySound(AudioClip clip) // Solely handles cheat activation sfx lol
+    {
+        if (audioSource && clip)
+        {
+            audioSource.PlayOneShot(clip);
         }
     }
 

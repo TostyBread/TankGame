@@ -1,22 +1,29 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class BriefingStuff : MonoBehaviour
 {
+    [System.Serializable]
+    public class GameObjectProbability
+    {
+        public GameObject gameObject;
+        public float probability;
+    }
+
     public GameObject uncoverBlind;  // The GameObject you want to move
     public float moveSpeed = 2f;  // Speed at which the GameObject will move
     public float targetYPosition = 300f;  // Target Y position
 
-    public GameObject[] gameObjects;  // Array of GameObjects to choose from
-    public float[] probabilities;  // Corresponding probabilities for each GameObject
+    public List<GameObjectProbability> gameObjectProbabilities;  // List of GameObjects with their probabilities
 
     private float initialYPosition;
     private bool isMoving = false;
 
     void Start()
     {
-        if (gameObjects.Length != probabilities.Length)
+        if (gameObjectProbabilities.Count == 0)
         {
-            //Debug.LogError("GameObjects and probabilities array must be of the same length!");
+            //Debug.LogError("GameObjectProbabilities list is empty!");
             return;
         }
 
@@ -44,22 +51,30 @@ public class BriefingStuff : MonoBehaviour
 
     void ActivateRandomObject()
     {
-        float totalProbability = 0;
-        foreach (float prob in probabilities) totalProbability += prob;
+        // Deactivate all GameObjects
+        foreach (var item in gameObjectProbabilities)
+        {
+            item.gameObject.SetActive(false);
+        }
 
+        // Calculate total probability
+        float totalProbability = 0;
+        foreach (var item in gameObjectProbabilities)
+        {
+            totalProbability += item.probability;
+        }
+
+        // Pick a random GameObject based on probabilities
         float randomValue = Random.Range(0, totalProbability);
         float cumulativeProbability = 0;
 
-        for (int i = 0; i < gameObjects.Length; i++)
+        foreach (var item in gameObjectProbabilities)
         {
-            cumulativeProbability += probabilities[i];
+            cumulativeProbability += item.probability;
             if (randomValue <= cumulativeProbability)
             {
-                gameObjects[i].SetActive(true);
-            }
-            else
-            {
-                gameObjects[i].SetActive(false);
+                item.gameObject.SetActive(true);
+                break;
             }
         }
     }
