@@ -359,7 +359,7 @@ MonoBehaviour:
   rotationSpeed: 48
   turretRotationSpeed: 0
   waypointTolerance: 0.1
-  spottingRange: 7.5
+  spottingRange: 10
   hasTurret: 0
   turret: {fileID: 0}
   raycastOrigin: {fileID: 6536858984710518749}

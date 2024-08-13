@@ -128,7 +128,7 @@ MonoBehaviour:
   rotationSpeed: 45
   turretRotationSpeed: 25
   waypointTolerance: 0.1
-  spottingRange: 7.5
+  spottingRange: 12
   hasTurret: 1
   turret: {fileID: 7847881141270295004}
   raycastOrigin: {fileID: 3447963984745058859}
@@ -193,7 +193,7 @@ Transform:
   m_GameObject: {fileID: 1605173785635268393}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.7, z: 0}
+  m_LocalPosition: {x: 0, y: 1.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
