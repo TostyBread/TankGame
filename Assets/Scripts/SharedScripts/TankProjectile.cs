@@ -5,11 +5,11 @@ using UnityEngine;
 public class TankProjectile : MonoBehaviour
 {
     public float projectileSpeed = 50f; // Projectile speed
-    public float projectileLifetime = 5f;
+    public float projectileLifetime = 5f; // Projectile life timer before destroy
 
-    public AudioClip HitTankSFX;
-    public AudioClip HitMiscSFX;
-    public AudioClip HitDestructableSFX;
+    public AudioClip HitTankSFX; // When enemy tank is hit
+    public AudioClip HitMiscSFX; // When hit other stuff
+    public AudioClip HitDestructableSFX; // When hit destructable objects
 
     public bool EnemyProjectile = false; // A toggle to check whether projectile can damage player
 
@@ -38,20 +38,20 @@ public class TankProjectile : MonoBehaviour
         {
             PlayHitAnimation(hitTank, collision.transform.position);
             Destroy(collision.gameObject);
-            //PlaySoundAtPoint(HitTankSFX, transform.position);
+            PlaySoundAtPoint(HitTankSFX, transform.position);
             Destroy(gameObject);
         }
         else if (collision.CompareTag("Destroyable")) // When hit destructable object
         {
             // Only remove the specific tile hit by the projectile
             tilemapHandler.RemoveTile(transform.position);
-            //PlaySoundAtPoint(HitDestructableSFX, transform.position);
+            PlaySoundAtPoint(HitDestructableSFX, transform.position);
             Destroy(gameObject);
         }
         else if (collision.CompareTag("Obstacles")) // When hit non destructable object
         {
             PlayHitAnimation(hitMisc, transform.position);
-            //PlaySoundAtPoint(HitMiscSFX, transform.position);
+            PlaySoundAtPoint(HitMiscSFX, transform.position);
             Destroy(gameObject);
         }
     }

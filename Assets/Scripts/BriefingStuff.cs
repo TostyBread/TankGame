@@ -21,30 +21,30 @@ public class BriefingStuff : MonoBehaviour
 
     void Start()
     {
-        if (gameObjectProbabilities.Count == 0)
+        if (gameObjectProbabilities.Count == 0) // if theres nothing in gameobject probability, just skip it
         {
             //Debug.LogError("GameObjectProbabilities list is empty!");
             return;
         }
 
-        ActivateRandomObject();
-        MoveObject();
+        ActivateRandomObject(); // activates the commanding officer sprite
+        MoveObject(); // moves the blind at soon as it start
     }
 
     void Update()
     {
-        if (isMoving)
+        if (isMoving) 
         {
-            Vector3 currentPosition = uncoverBlind.transform.position;
-            if (currentPosition.y < targetYPosition)
+            Vector3 currentPosition = uncoverBlind.transform.position; 
+            if (currentPosition.y < targetYPosition) // if haven't reach to target position
             {
-                currentPosition.y += moveSpeed * Time.deltaTime;
-                if (currentPosition.y > targetYPosition)
+                currentPosition.y += moveSpeed * Time.deltaTime; // current position of y axis will be move at certain speed
+                if (currentPosition.y > targetYPosition) // if it has reached to target position
                 {
                     currentPosition.y = targetYPosition;
-                    isMoving = false;
+                    isMoving = false; // restrict isMoving
                 }
-                uncoverBlind.transform.position = currentPosition;
+                uncoverBlind.transform.position = currentPosition; // blind transform position will be assign to current possion
             }
         }
     }
@@ -52,7 +52,7 @@ public class BriefingStuff : MonoBehaviour
     void ActivateRandomObject()
     {
         // Deactivate all GameObjects
-        foreach (var item in gameObjectProbabilities)
+        foreach (var item in gameObjectProbabilities) // At start, SetActive false all commander sprite
         {
             item.gameObject.SetActive(false);
         }
@@ -81,13 +81,13 @@ public class BriefingStuff : MonoBehaviour
 
     void MoveObject()
     {
-        if (uncoverBlind == null)
+        if (uncoverBlind == null) // if blind is not available, return;
         {
             //Debug.LogError("Object to move is not assigned!");
             return;
         }
 
-        initialYPosition = uncoverBlind.transform.position.y;
+        initialYPosition = uncoverBlind.transform.position.y; // initial position of blind will be assign to uncoverBlind position
         isMoving = true;
     }
 }

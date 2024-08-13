@@ -3,10 +3,10 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject gameOverPanel;
-    public GameObject victoryPanel;
-    public GameObject defaultTankStatus;
-    public GameObject specialTankStatus;
+    public GameObject gameOverPanel; // game over game object
+    public GameObject victoryPanel; // vitory game object
+    public GameObject defaultTankStatus; // default tank game object
+    public GameObject specialTankStatus; // special tank game object
     public TextMeshProUGUI timerText; // Reference to the UI Text component for the timer
 
     public AudioSource audioSource; // Reference to the AudioSource component
@@ -32,7 +32,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        if (isTimerRunning)
+        if (isTimerRunning) // if timer still running isnt false
         {
             timer += Time.deltaTime;
             UpdateTimerText();

@@ -73,13 +73,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public bool IsMoving() // Reference to TankEngineSFX
-    {
-        float move = Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        float rotate = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
+    //public bool IsMoving() // Reference to TankEngineSFX
+    //{
+    //    float move = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+    //    float rotate = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
 
-        return Mathf.Abs(move) > 0 || Mathf.Abs(rotate) > 0;
-    }
+    //    return Mathf.Abs(move) > 0 || Mathf.Abs(rotate) > 0;
+    //}
 
     private void PlayerMovement()
     {
@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour
         turret.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 
-    private void PlayerShoot()
+    private void PlayerShoot() // When player shoot
     {
         Instantiate(tankProjectile, firePos.position, firePos.rotation);
         PlayRandomSound(shootSFX);
@@ -162,10 +162,10 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(DestroyAfterAnimation(explosion, explosionDuration));
     }
 
-    private IEnumerator DestroyAfterAnimation(GameObject explosion, float duration)
+    private IEnumerator DestroyAfterAnimation(GameObject explosion, float duration) // Handles player tank destroy animation
     {
-        yield return new WaitForSeconds(duration);
-        Destroy(explosion);
+        yield return new WaitForSeconds(duration); // Wait for the duration
+        Destroy(explosion); // When duration is over, destroy the explosion animation
     }
 
     private void PlayRandomSound(AudioClip[] clips)
@@ -189,7 +189,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (reloadText != null)
+        if (reloadText != null) // if reload text is available
         {
             // Disable the reloadText game object
             reloadText.text = "";

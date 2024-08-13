@@ -1,46 +1,47 @@
 using UnityEngine;
-using TMPro; // Import TMPro namespace for TextMeshPro
+using TMPro; // Import the TextMeshPro namespace for UI text elements
 
 public class ZoneManager : MonoBehaviour
 {
     [System.Serializable]
     public class Zone
     {
-        public GameObject zoneObject; // GameObject representing the zone
-        public GameObject[] enemyTanks; // Array to hold enemy tanks for this zone
-        public float xMin; // Minimum x-axis value for this zone
-        public float xMax; // Maximum x-axis value for this zone
+        public GameObject zoneObject; // GameObject representing the zone (e.g., a visual area in the game)
+        public GameObject[] enemyTanks; // Array to hold enemy tanks within this zone
+        public float xMin; // Minimum x-axis value defining the left boundary of the zone
+        public float xMax; // Maximum x-axis value defining the right boundary of the zone
     }
 
-    public Zone[] zones; // Array to hold the different zones
-    public GameObject defaultTank; // Reference to the player
-    public GameObject specialTank;
-    public TextMeshProUGUI warningText; // UI TextMeshPro to display warnings
-    public GameObject warningTextShade; 
-    public TextMeshProUGUI completionText; // UI TextMeshPro to display completion messages
-    public GameObject completionTextShade;
-    public float returnTime = 5f; // Time allowed for player to return to the zone before being destroyed
-    public float completionDisplayTime = 3f; // Time to display the completion message
+    public Zone[] zones; // Array to hold the different zones in the game
+    public GameObject defaultTank; // Reference to the default player tank
+    public GameObject specialTank; // Reference to any special player tank or secondary player
+    public TextMeshProUGUI warningText; // UI TextMeshPro element to display warnings to the player
+    public GameObject warningTextShade; // GameObject for shading or styling the warning text
+    public TextMeshProUGUI completionText; // UI TextMeshPro element to display completion messages
+    public GameObject completionTextShade; // GameObject for shading or styling the completion text
+    public float returnTime = 5f; // Time allowed for the player to return to the zone before being penalized
+    public float completionDisplayTime = 3f; // Time to display the completion message after clearing a zone
 
     // Audio Sources and Clips
-    public AudioSource audioSource;
-    public AudioClip completionSound;
-    public AudioClip victorySound;
+    public AudioSource audioSource; // AudioSource for playing sound effects
+    public AudioClip completionSound; // Sound effect for zone completion
+    public AudioClip victorySound; // Sound effect for game victory
 
     private int currentZoneIndex = 0; // Index of the currently active zone
-    private bool isWarningActive = false;
-    private bool isCompletionMessageActive = false;
-    private float warningTimer = 0f;
-    private float completionTimer = 0f;
-    private bool zoneCleared = false;
-    private bool givenDamage = false;
+    private bool isWarningActive = false; // Flag to indicate if the warning message is currently active
+    private bool isCompletionMessageActive = false; // Flag to indicate if the completion message is currently active
+    private float warningTimer = 0f; // Timer for tracking the duration of the warning message
+    private float completionTimer = 0f; // Timer for tracking the duration of the completion message
+    private bool zoneCleared = false; // Flag to indicate if the current zone has been cleared
+    private bool givenDamage = false; // Flag to ensure damage is only given once
 
-    UIManager uIManager;
+    UIManager uIManager; // Reference to the UIManager for managing UI elements
 
     void Start()
     {
-        uIManager = GetComponent<UIManager>(); // Reference UIManager
+        uIManager = GetComponent<UIManager>(); // Get the UIManager component
 
+        // Hide text shades initially
         completionTextShade.SetActive(false);
         warningTextShade.SetActive(false);
 
@@ -57,20 +58,24 @@ public class ZoneManager : MonoBehaviour
         warningText.gameObject.SetActive(false);
         completionText.gameObject.SetActive(false);
 
+        // Get the AudioSource component if not assigned in the Inspector
         if (audioSource == null)
         {
-            audioSource = GetComponent<AudioSource>(); // Reference AudioSource if not assigned in the Inspector
+            audioSource = GetComponent<AudioSource>();
         }
     }
 
     void Update()
     {
-        if (defaultTank == null || specialTank == null) return; // When player died, do nothing
+        // If player tanks are not assigned, do nothing
+        if (defaultTank == null || specialTank == null) return;
 
+        // Process only if within valid zone index
         if (currentZoneIndex < zones.Length)
         {
-            CheckPlayerPosition();
+            CheckPlayerPosition(); // Check if the player is within the current zone
 
+            // Check if all enemies in the current zone are destroyed
             if (AreAllEnemiesDestroyed())
             {
                 if (!zoneCleared)
@@ -89,14 +94,14 @@ public class ZoneManager : MonoBehaviour
             }
             else
             {
-                zoneCleared = false; // Reset flag if enemies are not cleared yet
-
+                // Reset zone cleared flag if enemies are not cleared yet
+                zoneCleared = false;
             }
 
+            // Handle the display of the completion message
             if (isCompletionMessageActive)
             {
-                // Update the completion message timer
-                completionTimer += Time.deltaTime;
+                completionTimer += Time.deltaTime; // Update the timer
                 if (completionTimer >= completionDisplayTime)
                 {
                     // Hide completion message after the display time
@@ -115,34 +120,34 @@ public class ZoneManager : MonoBehaviour
 
     void CheckPlayerPosition()
     {
-        if (zones.Length == 0) return;
+        if (zones.Length == 0) return; // Exit if no zones are defined
 
-        Zone currentZone = zones[currentZoneIndex];
-        float playerX = defaultTank.transform.position.x;
-        float playerXtoo = specialTank.transform.position.x;
+        Zone currentZone = zones[currentZoneIndex]; // Get the current zone
+        float playerX = defaultTank.transform.position.x; // Get the x position of the default tank
+        float playerXtoo = specialTank.transform.position.x; // Get the x position of the special tank
 
+        // Check if either tank is outside the current zone boundaries
         if (playerX < currentZone.xMin || playerX > currentZone.xMax || playerXtoo < currentZone.xMin || playerXtoo > currentZone.xMax)
         {
             if (!isWarningActive)
             {
-                // Start warning sequence
+                // Start the warning sequence if not already active
                 warningText.gameObject.SetActive(true);
                 warningTextShade.SetActive(true);
                 isWarningActive = true;
             }
 
-            // Update warning timer
+            // Update the warning timer
             warningTimer += Time.deltaTime;
             warningText.text = $"Return to the combat area! {Mathf.Max(returnTime - warningTimer, 0):F1}";
 
             if (warningTimer >= returnTime)
             {
-                // Destroy player if they did not return in time
-                // Apply damage if the hit object has a Health component
+                // If the player did not return in time, apply damage
                 Health health = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
                 if (health != null && !givenDamage)
                 {
-                    health.TakeDamage(10);
+                    health.TakeDamage(10); // Apply damage
                     givenDamage = true;
                 }
             }
@@ -189,7 +194,7 @@ public class ZoneManager : MonoBehaviour
         }
         else
         {
-            // All zones cleared, show area secured message
+            // All zones cleared, show victory message
             ShowVictoryScreen();
         }
     }
@@ -219,7 +224,7 @@ public class ZoneManager : MonoBehaviour
     {
         uIManager.isTimerRunning = false; // Stop the timer
         uIManager.UpdateTimerText();      // Ensure the timer text is up-to-date
-        uIManager.victoryPanel.SetActive(true); // When player wins, activate the victory panel
+        uIManager.victoryPanel.SetActive(true); // Show the victory panel
         PlaySound(victorySound);
     }
 
@@ -227,7 +232,7 @@ public class ZoneManager : MonoBehaviour
     {
         if (audioSource && clip)
         {
-            audioSource.PlayOneShot(clip);
+            audioSource.PlayOneShot(clip); // Play the specified sound effect
         }
     }
 }
