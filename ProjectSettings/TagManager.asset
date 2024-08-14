@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Obstacles
   - Destroyable
   - Enemy
+  - Obstacles
   layers:
   - Default
   - TransparentFX
@@ -19,7 +19,7 @@ TagManager:
   - Player
   - BorderWall
   - Landmine
-  - 
+  - Obstacles
   - 
   - 
   - 

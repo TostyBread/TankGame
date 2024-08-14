@@ -140,6 +140,9 @@ MonoBehaviour:
   playerDetector:
     serializedVersion: 2
     m_Bits: 256
+  doNotShoot:
+    serializedVersion: 2
+    m_Bits: 2176
   tankProjectile: {fileID: 5743627026731766755, guid: 920c2bc1ded881f43b99af5ca91b60e0, type: 3}
   projectileSpeed: 50
   firePos: {fileID: 260735915679417625}

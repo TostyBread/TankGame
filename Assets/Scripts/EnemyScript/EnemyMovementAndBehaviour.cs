@@ -21,6 +21,7 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
     public float raycastDistance = 1f; // Distance of the raycast
     public LayerMask obstacleLayer; // Layer of obstacles (e.g., other tanks)
     public LayerMask playerDetector; // Layer for detecting player
+    public LayerMask doNotShoot; // Layer for detecting things that should not be shooting
 
     public GameObject tankProjectile; // Tank projectile
     public float projectileSpeed = 50f; // Tank projectile speed
@@ -69,13 +70,14 @@ public class EnemyMovementAndBehaviour : MonoBehaviour
         Vector3 offsetDirection = new Vector3(-direction.y, direction.x, 0f); // 90-degree rotation to the left
 
         // Perform the raycast
-        RaycastHit2D insight = Physics2D.Raycast(raycastShootingPoint.position, offsetDirection, 100f, playerDetector);
+        RaycastHit2D insight = Physics2D.Raycast(raycastShootingPoint.position, offsetDirection, 13f, playerDetector); // Handles when hitting player
+        RaycastHit2D notInSight = Physics2D.Raycast(raycastShootingPoint.position, offsetDirection, 13f, doNotShoot); // Handles when hitting indestructable obstacle
 
         // Calculate the 90-degree rotation offset for the projectile
         Quaternion rotationOffset = Quaternion.Euler(0, 0, 90f); // 90-degree rotation around the Z-axis
         Quaternion finalRotation = firePos.rotation * rotationOffset; // Apply the offset to the fire position's rotation
 
-        if (insight.collider && playerInRange) // if player in range and raycast touches player collider, fire at player
+        if (insight.collider && playerInRange && !notInSight.collider) // if player in range and raycast touches player collider while it isnt being block by enemy or collider, fire at player
         {
             if (cooldownTimer <= 0f) // check if cooldown is over, if yes, then shoot again
             {
