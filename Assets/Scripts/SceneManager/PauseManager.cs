@@ -1,13 +1,14 @@
-using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PauseManager : MonoBehaviour
 {
     public GameObject pauseMenuUI; // Drag your Pause Menu Panel here
-    private bool isPaused = false;
+    private bool isPaused = false; // Condition to make sure if the game is paused
+    SceneLoader loader;
 
     private void Start()
     {
+        loader = GetComponent<SceneLoader>(); // Reference Sceneloader
         pauseMenuUI.SetActive(false); // Hide Menu UI at start
         //Make sure the game isn't in pause state everytime you enter a new scene
         isPaused = false;
@@ -45,12 +46,11 @@ public class PauseManager : MonoBehaviour
 
     public void RestartGame() // Reloads current scene
     {
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
+        loader.RestartGame();
     }
 
-    public void QuitToMainMenu()
+    public void QuitToMainMenu() //Return to main menu
     {
-        SceneManager.LoadScene("MainMenu"); // Return to main menu
+        loader.ReturnMainMenu();
     }
 }
