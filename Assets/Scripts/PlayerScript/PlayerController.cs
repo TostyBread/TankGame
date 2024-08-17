@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f; // Tank speed
     public float rotationSpeed = 50f; // Hull rotation speed
     public float turretRotationSpeed = 5f; // Turret rotation speed
+    public float deceleration = 0.95f; // Deceleration factor to gradually stop movement
+    private Vector2 velocity = Vector2.zero; // Track the current velocity
 
     public GameObject tankProjectile; // Tank projectile
     public float projectileSpeed = 50f; // Tank projectile speed
@@ -73,26 +75,45 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //public bool IsMoving() // Reference to TankEngineSFX
-    //{
-    //    float move = Input.GetAxis("Vertical") * speed * Time.deltaTime;
-    //    float rotate = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
-
-    //    return Mathf.Abs(move) > 0 || Mathf.Abs(rotate) > 0;
-    //}
-
-    private void PlayerMovement()
+    public bool IsMoving() // Reference to TankEngineSFX
     {
-        // Handles tank move and turn control
         float move = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         float rotate = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
 
-        // Use transform 
-        transform.Translate(0, move, 0);
+        return Mathf.Abs(move) > 0 || Mathf.Abs(rotate) > 0;
+    }
+
+    private void PlayerMovement()
+    {
+        // Get the movement and rotation input
+        float moveInput = Input.GetAxis("Vertical");
+        float rotateInput = Input.GetAxis("Horizontal");
+
+        // Calculate movement vector
+        Vector2 move = new Vector2(0, moveInput * speed * Time.deltaTime);
+
+        // Calculate rotation
+        float rotate = rotateInput * rotationSpeed * Time.deltaTime;
+
+        // Update velocity based on input
+        if (moveInput != 0)
+        {
+            velocity = move;
+        }
+        else
+        {
+            // Apply deceleration if no input is detected
+            velocity *= deceleration;
+        }
+
+        // Move the tank based on the current velocity
+        transform.Translate(velocity);
+
+        // Apply rotation
         transform.Rotate(0, 0, -rotate);
 
         // Determine if the tank is moving
-        bool isMoving = Mathf.Abs(move) > 0 || Mathf.Abs(rotate) > 0;
+        bool isMoving = Mathf.Abs(moveInput) > 0 || Mathf.Abs(rotateInput) > 0;
 
         // Play movement sound if moving and not already playing
         if (isMoving && !wasMoving)

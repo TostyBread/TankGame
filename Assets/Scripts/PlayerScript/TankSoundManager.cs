@@ -60,7 +60,7 @@ public class TankSoundManager : MonoBehaviour
             return;
         }
 
-        //bool isMoving = playerController.IsMoving();
+        bool isMoving = playerController.IsMoving();
 
         if (!gameObject.activeInHierarchy)
         {
@@ -75,12 +75,12 @@ public class TankSoundManager : MonoBehaviour
         if (cameraController.IsFollowingSpecialTank)
         {
             // Proceed with handling special tank sounds
-            //HandleSpecialTankSound(playerController.IsMoving());
+            HandleSpecialTankSound(playerController.IsMoving());
         }
         else
         {
             // Proceed with handling default tank sounds
-            //HandleDefaultTankSound(playerController.IsMoving());
+            HandleDefaultTankSound(playerController.IsMoving());
         }
     }
 

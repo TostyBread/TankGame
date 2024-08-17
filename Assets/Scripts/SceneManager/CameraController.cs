@@ -10,11 +10,12 @@ public class CameraController : MonoBehaviour
     public GameObject popupText; // Reference to the popup text GameObject that displays cheat activation
     public AudioClip cheatActivatedSFX; // AudioClip played when the cheat is activated
     public float xMinActivationCheat; // Minimum x-axis value before the cheat can be activated
+    public DynamicAmbientSFX dynamicAmbientSFX; // Reference to the DynamicAmbientSFX component
 
     private string cheatCode = "halo"; // The cheat code to be activated
     private string currentInput = ""; // Current input string to check against the cheat code
-    private float popupDuration = 3f; // Duration for which the popup text will be displayed
 
+    private float popupDuration = 3f; // Duration for which the popup text will be displayed
     UIController uiController; // Reference to the UIController component
     public AudioSource audioSource; // Reference to the AudioSource for playing sound effects
 
@@ -43,6 +44,12 @@ public class CameraController : MonoBehaviour
 
         // Set the camera to follow the default tank initially
         SetFollowTarget(defaultTank);
+
+        // Initialize DynamicAmbientSFX with the default tank
+        if (dynamicAmbientSFX != null)
+        {
+            dynamicAmbientSFX.UpdatePlayerTank(defaultTank);
+        }
 
         // Ensure the popup text is initially hidden
         if (popupText != null)
@@ -127,6 +134,13 @@ public class CameraController : MonoBehaviour
             {
                 StartCoroutine(ShowPopupText());
             }
+        }
+
+        // Notify DynamicAmbientSFX about the tank switch
+        if (dynamicAmbientSFX != null)
+        {
+            GameObject currentTank = useDefaultTank ? defaultTank : specialTank;
+            dynamicAmbientSFX.UpdatePlayerTank(currentTank);
         }
     }
 
