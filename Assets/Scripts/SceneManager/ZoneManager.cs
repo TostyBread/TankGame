@@ -16,11 +16,12 @@ public class ZoneManager : MonoBehaviour
     public GameObject defaultTank; // Reference to the default player tank
     public GameObject specialTank; // Reference to any special player tank or secondary player
     public TextMeshProUGUI warningText; // UI TextMeshPro element to display warnings to the player
-    public GameObject warningTextShade; // GameObject for shading or styling the warning text
+    public GameObject warningTextUI; // GameObject for the warning text
     public TextMeshProUGUI completionText; // UI TextMeshPro element to display completion messages
-    public GameObject completionTextShade; // GameObject for shading or styling the completion text
+    public GameObject completionTextUI; // GameObject for the completion text
     public float returnTime = 5f; // Time allowed for the player to return to the zone before being penalized
     public float completionDisplayTime = 3f; // Time to display the completion message after clearing a zone
+    public GameObject ArrowUI; // Arrow UI when player cleared the zone
 
     // Audio Sources and Clips
     public AudioSource audioSource; // AudioSource for playing sound effects
@@ -40,10 +41,10 @@ public class ZoneManager : MonoBehaviour
     void Start()
     {
         uIManager = GetComponent<UIManager>(); // Get the UIManager component
-
-        // Hide text shades initially
-        completionTextShade.SetActive(false);
-        warningTextShade.SetActive(false);
+        ArrowUI.SetActive(false); // Hide arrow UI at start
+        // Hide text initially
+        completionTextUI.SetActive(false);
+        warningTextUI.SetActive(false);
 
         // Initialize all zones to inactive
         foreach (Zone zone in zones)
@@ -106,8 +107,9 @@ public class ZoneManager : MonoBehaviour
                 {
                     // Hide completion message after the display time
                     completionText.gameObject.SetActive(false);
-                    completionTextShade.SetActive(false);
+                    completionTextUI.SetActive(false);
                     isCompletionMessageActive = false;
+                    ArrowUI.SetActive(false);
                     completionTimer = 0f;
 
                     // Activate the next zone
@@ -133,7 +135,7 @@ public class ZoneManager : MonoBehaviour
             {
                 // Start the warning sequence if not already active
                 warningText.gameObject.SetActive(true);
-                warningTextShade.SetActive(true);
+                warningTextUI.SetActive(true);
                 isWarningActive = true;
             }
 
@@ -147,7 +149,7 @@ public class ZoneManager : MonoBehaviour
                 Health health = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
                 if (health != null && !givenDamage)
                 {
-                    health.TakeDamage(10); // Apply damage
+                    health.TakeDamage(50); // Apply damage
                     givenDamage = true;
                 }
             }
@@ -158,7 +160,7 @@ public class ZoneManager : MonoBehaviour
             if (isWarningActive)
             {
                 warningText.gameObject.SetActive(false);
-                warningTextShade.SetActive(false);
+                warningTextUI.SetActive(false);
                 isWarningActive = false;
                 warningTimer = 0f;
             }
@@ -204,7 +206,7 @@ public class ZoneManager : MonoBehaviour
         if (currentZoneIndex < zones.Length - 1) // Intermediate zones
         {
             completionText.gameObject.SetActive(true);
-            completionTextShade.SetActive(true);
+            completionTextUI.SetActive(true);
             completionText.text = "All enemies in this area have been eliminated, advance!";
             isCompletionMessageActive = true;
             PlaySound(completionSound);
@@ -214,7 +216,8 @@ public class ZoneManager : MonoBehaviour
     void ShowAreaSecuredMessage()
     {
         completionText.gameObject.SetActive(true);
-        completionTextShade.SetActive(true);
+        completionTextUI.SetActive(true);
+        ArrowUI.SetActive(false);
         completionText.text = "All enemies have been destroyed, we've secured the area!";
         isCompletionMessageActive = true;
         PlaySound(completionSound);
